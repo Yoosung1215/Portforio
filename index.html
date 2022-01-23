@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="웹퍼블리셔 포트폴리오-박유성,웹퍼블리셔 포트폴리오,퍼블리셔 포트폴리오">
+    <meta name="author" content="박유성,Park Yoo Sung">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="zb7ibfffTHtUR_lmJvorsPoJr89_9gmtV75lUSYvcE0" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="icon57.png">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./js/jquery.scrollToGiveClass.js"></script>
+    <script src="./js/jquery.poptrox.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/main.js"></script>
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>웹퍼블리셔 포트폴리오-박유성</title>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+          //메인페이지 별 빛나는 효과
+        var canvas = document.getElementById('canvas'),
+        ctx = canvas.getContext('2d'),
+        w = canvas.width = window.innerWidth,
+        h = canvas.height = window.innerHeight,
+            
+        hue = 217,
+        stars = [],
+        count = 0,
+        maxStars = 1400;
+    
+        // Cache gradient
+        var canvas2 = document.createElement('canvas'),
+            ctx2 = canvas2.getContext('2d');
+            canvas2.width = 100;
+            canvas2.height = 100;
+        var half = canvas2.width/2,
+            gradient2 = ctx2.createRadialGradient(half, half, 0, half, half, half);
+            gradient2.addColorStop(0.025, '#fff');
+            gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
+            gradient2.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');
+            gradient2.addColorStop(1, 'transparent');
+    
+            ctx2.fillStyle = gradient2;
+            ctx2.beginPath();
+            ctx2.arc(half, half, half, 0, Math.PI * 2);
+            ctx2.fill();
+    
+        // End cache
+    
+        function random(min, max) {
+        if (arguments.length < 2) {
+            max = min;
+            min = 0;
+        }
+        
+        if (min > max) {
+            var hold = max;
+            max = min;
+            min = hold;
+        }
+    
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    
+        function maxOrbit(x,y) {
+        var max = Math.max(x,y),
+            diameter = Math.round(Math.sqrt(max*max + max*max));
+        return diameter/2;
+        }
+    
+        var Star = function() {
+    
+        this.orbitRadius = random(maxOrbit(w,h));
+        this.radius = random(60, this.orbitRadius) / 12;
+        this.orbitX = w / 2;
+        this.orbitY = h / 2;
+        this.timePassed = random(0, maxStars);
+          //별 돌아가는 속도
+        this.speed = random(this.orbitRadius) / 800000; 
+        this.alpha = random(2, 10) / 10;
+    
+        count++;
+        stars[count] = this;
+        }
+    
+        Star.prototype.draw = function() {
+          var x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX,
+              y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY,
+            twinkle = random(10);
+    
+        if (twinkle === 1 && this.alpha > 0) {
+            this.alpha -= 0.05;
+        } else if (twinkle === 2 && this.alpha < 1) {
+            this.alpha += 0.05;
+        }
+    
+        ctx.globalAlpha = this.alpha;
+            ctx.drawImage(canvas2, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius);
+        this.timePassed += this.speed;
+        }
+    
+        for (var i = 0; i < maxStars; i++) {
+        new Star();
+        }
+    
+        function animation() {
+            ctx.globalCompositeOperation = 'source-over';
+            ctx.globalAlpha = 0.8;
+            ctx.fillStyle = 'hsla(' + hue + ', 64%, 6%, 1)';
+            ctx.fillRect(0, 0, w, h)
+        
+        ctx.globalCompositeOperation = 'lighter';
+        for (var i = 1, l = stars.length; i < l; i++) {
+            stars[i].draw();
+        };  
+        
+        window.requestAnimationFrame(animation);
+        }
+    
+        animation();
+        
+            //메인페이지 텍스트 타이핑 효과
+            function consoleText(words, id, colors) {
+                if (colors === undefined) colors = ['#fff'];
+                var visible = true;
+                var con = document.getElementById('console');
+                var letterCount = 1;
+                var x = 1;
+                var waiting = false;
+                var target = document.getElementById(id)
+                target.setAttribute('style', 'color:' + colors[0])
+                window.setInterval(function() {
+            
+                if (letterCount === 0 && waiting === false) {
+                waiting = true;
+                target.innerHTML = words[0].substring(0, letterCount)
+                window.setTimeout(function() {
+                    var usedColor = colors.shift();
+                    colors.push(usedColor);
+                    var usedWord = words.shift();
+                    words.push(usedWord);
+                    x = 1;
+                    target.setAttribute('style', 'color:' + colors[0])
+                    letterCount += x;
+                    waiting = false;
+                }, 1000)
+                } else if (letterCount === words[0].length + 1 && waiting === false) {
+                waiting = true;
+                window.setTimeout(function() {
+                    x = -1;
+                    letterCount += x;
+                    waiting = false;
+                }, 1000)
+                } else if (waiting === false) {
+                target.innerHTML = words[0].substring(0, letterCount)
+                letterCount += x;
+                }
+            }, 120)
+            window.setInterval(function() {
+                if (visible === true) {
+                con.className = 'console-underscore hidden'
+                visible = false;
+            
+                } else {
+                con.className = 'console-underscore'
+            
+                visible = true;
+                }
+            }, 400)
+            }
+    
+            //end: 텍스트 타이핑 효과 
+
+            //스크롤된 위치값 반환
+            $(window).on("scroll resize",function(){
+                var win = $(window).scrollTop(); 
+                $("body").css("--scroll",win);
+            });
+
+            $("pre.text01, pre.text02, .mouse, .console-container").scrollToGiveClass({
+                baseline:400
+            });
+            $(" .nuki").scrollToGiveClass({ 
+                baseline:"bottom"
+            });  
+            $(" #top_hello h4").scrollToGiveClass({
+                baseline:"middle",
+                add:0.25
+            });  
+            $("#wrap2").scrollToGiveClass({
+                baseline:1600
+            }); 
+            
+            $(".about_t").scrollToGiveClass({
+                baseline:"bottom"
+            });  
+            
+            $(".first").scrollToGiveClass({
+                baseline:"bottom"
+            }); 
+            $("#content_inner").scrollToGiveClass({
+                baseline:"middle",
+            });
+            $("#wrap4 .inner, #wrap4 p").scrollToGiveClass({
+                baseline:"bottom"
+            }); 
+    
+            $(".click").poptrox({
+    
+            });
+            $(".pop").poptrox({
+
+            });
+            $(".plus").click(function(){
+                $(this).add(".others_inner").add("#wrap4").toggleClass("show");
+            });
+            $(".others_detail").poptrox({
+    
+            });
+            $("#wrap5 > h2").click(function(){
+                $(this).add(".wrap-bg").add(".send").add(".wrap").toggleClass("active");
+            });
+            $("#wrap5 .btn").click(function(){
+                $("#mail_area").add("#black-bg").addClass("show");
+            });
+            $(".close").click(function(){
+                $("#mail_area").add("#black-bg").removeClass("show");
+            });
+</script>
+<div class="modal">
+    <div>
+        <img src="./img/promotion1.png" alt="">
+    </div>
+</div>
+<div>
+    <div class="header">
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li class="dropmenu">
+                <a href="#">Work</a>
+                <ul class="dropdown">
+                    <li><a href="#">Chapter1</a></li>
+                    <li><a href="#">Chapter2</a></li>
+                    <li><a href="#">Chapter3</a></li>
+                    <li><a href="#">Chapter4</a></li>
+                    <li><a href="#">Chapter5</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <i class="fas fa-bars"></i>
+    <div class="headerc">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li class="dropmenuc">
+                <a href="#">Work</a>
+                <ul class="dropdownc">
+                    <li><a href="#">Chapter1</a></li>
+                    <li><a href="#">Chapter2</a></li>
+                    <li><a href="#">Chapter3</a></li>
+                    <li><a href="#">Chapter4</a></li>
+                    <li><a href="#">Chapter5</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="Home">
+        <div class="wrap">
+            <div class="proimgwrap">
+                <div class="profileimg">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="ftext-1">
+                <p class="jaeryo">Welcome</p>
+                <p class="jaeryo">Park Yoo Sung's</p>
+                <p class="jaeryo">PORTFOLIO</p>
+                <div class="icon-scroll"></div>
+            </div>
+            <div class="ftext"> 
+                <p class="meint"></p>
+                <p class="meint"></p>
+                <p class="meint"></p>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="About">
+        <h2>About</h2>
+        <div class="Aboutwrap">
+            <div class="left">
+                <div class="Profile">
+                    <div class="tl">
+                        <h3>Profile</h3>
+                        <img src="./img/profileicon.png" alt="profileicon">
+                    </div>
+                    <div class="Ptext atext">
+                        <p>제 이름은 <b>박유성</b> 입니다.</p>
+                        <p>출생년도 <span>99.12.15</span></p>
+                        <p>휴대폰 <span>010.7355.6942</span></p>
+                        <p>이메일 <span>dlddudlsrks1615@naver.com</span></p>
+                    </div>
+                </div>
+                <div class="License">
+                    <div class="tl">
+                        <h3>License</h3>
+                        <img src="./img/licenseicon.png" alt="licenseicon">
+                    </div>
+                    <div class="Ltext atext">
+                        <p>2018.10.17 <span>1종 보통 운전면허</span></p>
+                        <p>2021.12.07 <span>웹디자인 기능사</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="Education">
+                    <div class="tl">
+                        <h3>Education</h3>
+                        <img src="./img/educationicon.png" alt="educationicon">
+                    </div>
+                    <div class="Etext atext">
+                        <p>2020.03.03 ~ 2021.05.31<br><span>영상편집디자인 & 유튜브 동영상(프리미어, 애펙)</span></p>
+                        <p>2021.08.09 ~ 2022.01.25<br><span>영상편집 활용 웹디자인 웹퍼블리셔 디지털실무 양성과정 A</span></p>
+                        <img src="./img/educationbg.png" alt="칠판그림">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Skill">
+            <h3>Skill</h3>
+            <div class="Skillwrap">
+                <div class="htmlcss">
+                    <div class="simg">
+                        <img src="./img/html.png" alt="htmlicon">
+                        <img src="./img/css.png" alt="cssicon">
+                    </div>
+                    <div class="text">
+                        <p>콘텐츠 내용에 알맞은 시맨틱 태그를 사용하여 코드를 작성합니다.</p>
+                        <br>
+                        <p>웹 표준 및 웹 접근성을 준수하여 반응형 레이아웃을 제작할 수 있습니다.</p>
+                    </div>
+                </div>
+                <div class="aips">
+                    <div class="simg">
+                        <img src="./img/ai.png" alt="aiicon">
+                        <img src="./img/ps.png" alt="psicon">
+                    </div>
+                    <div class="text">
+                        <p>사진 보정 및 로고, 배너, 아이콘 등의 디자인 작업을 할 수 있습니다.</p>
+                        <br>
+                        <p>XD를 활용하여 웹 사이트의 시안과 프로토타입 제작이 가능합니다.</p>
+                    </div>
+                </div>
+                <div class="js">
+                    <div class="simg">
+                        <img src="./img/js1.png" alt="jsicon">
+                    </div>
+                    <div class="text">
+                        <p>제이쿼리를 활용하여 다양한 애니메이션과 기능을 구현할 수 있습니다.</p>
+                    </div>
+                </div>
+                <div class="prae">
+                    <div class="simg">
+                        <img src="./img/pr.png" alt="pricon">
+                        <img src="./img/ae.png" alt="aeicon">
+                    </div>
+                    <div class="text">
+                        <p>프리미어를 활용한 컷편집, 자막 및 자막효과를 사용 할 수 있고</p>
+                        <br>
+                        <p>애프터이펙트를 활용한 간단한 모션그래픽 작업을 할 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Work">
+        <div class="Workwrap work1 firstwork">
+            <h2 class="fst">Work<span>Chapter 01</span></h2>
+            <div class="work1wrap">
+                <div class="wtext">
+                    <div>
+                        <h3>MCM 웹사이트 제작</h3>
+                        <p>기여도 및 제작기간<br><span>퍼블리싱 100%, 제작기간 2일</span></p>
+                        <p>사용프로그램<br><span>Photoshop, EditPlus®</span></p>
+                        <p>프로젝트 소개<br><span>웹 디자인 실무 교육과정을 통해<br>처음 코딩을 접하고 진행하게된 개인 코딩 프로젝트 였습니다.<br>HTML과 CSS를 배운지 얼마 안돼었을 즈음에 처음으로 만든 웹사이트 입니다.<br>최대한 원래의 사이트를 구현하려고 하였습니다.</span></p>
+                        <a href="./mcm/mcm.html" target="_blank">사이트 확인하기</a>
+                    </div>
+                </div>
+                <div class="monitor">
+                    <div class="moniwrap">
+                        <div class="moni">
+                            <img src="./img/work3img.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Workwrap work2">
+            <h2>Work<span>Chapter 02</span></h2>
+            <div class="work1wrap w2">
+                <div class="monitor">
+                    <div class="moniwrap">
+                        <div class="moni">
+                            <img src="./img/work4img.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="wtext wtext2">
+                    <div>
+                        <h3>MISSHA 웹사이트 제작</h3>
+                        <p>기여도 및 제작기간<br><span>퍼블리싱 100%,  제작기간 5일</span></p>
+                        <p>사용프로그램<br><span>Photoshop, EditPlus®</span></p>
+                        <p>프로젝트 소개<br><span>웹 디자인 실무 교육과정을 통해<br>이전보다 더 HTML과 CSS가 익숙해졋을때 즈음에 맡게된 개인 프로젝트입니다.</span></p>
+                        <a href="./missha/htb.html" target="_blank">사이트 확인하기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Workwrap work4"> 
+            <h2 class="fst">Work<span>Chapter 03</span></h2>
+            <div class="work1wrap">
+                <div class="wtext">
+                    <div>
+                        <h3>빽다방 웹사이트 제작</h3>
+                        <p>기여도 및 제작기간<br><span>퍼블리싱 50%, 제작기간 1주일</span></p>
+                        <p>사용프로그램<br><span>Photoshop, Illustrator, Visual Studio Code</span></p>
+                        <p>프로젝트 소개<br><span>웹 디자인 실무 교육과정을 통해<br>처음 코딩을 접하고 진행하게된 팀 코딩 프로젝트 였습니다.<br>JS를 배우기 전단계여서 최대한 JS를 사용하지않고<br>원래의 사이트를 구현하려고 하였습니다.<br>제가 직접 진행한 작업파트는 Header, 소식파트 입니다.</span></p>
+                        <a href="./bbackdabang/bbackdabang_main.html" target="_blank">사이트 확인하기</a>
+                    </div>
+                </div>
+                <div class="monitor">
+                    <div class="moniwrap">
+                        <div class="moni">
+                            <img src="./img/work1img.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Workwrap work5">
+            <h2>Work<span>Chapter 04</span></h2>
+            <div class="work1wrap w2">
+                <div class="monitor">
+                    <div class="moniwrap">
+                        <div class="moni">
+                            <img src="./img/work2img.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="wtext wtext2">
+                    <div>
+                        <h3>오뚜기 웹사이트 리뉴얼 ( 반응형 )</h3>
+                        <p>기여도 및 제작기간<br><span>디자인 75% + 퍼블리싱 75%,  제작기간 5일</span></p>
+                        <p>사용프로그램<br><span>Photoshop, Illustrator, Visual Studio Code</span></p>
+                        <p>프로젝트 소개<br><span>웹 디자인 실무 교육과정을 통해<br>jQuery, 반응형을 배우고 난후  진행하게된 프로젝트입니다.<br>Tab menu, Slider, 그리고 웹사이트에 크기에 맞춰<br>웹사이트의 구조가 바뀌는 반응형을 적용하였습니다.<br>제가 직접 진행한 작업파트는<br>Header, Footer, 메인, 회사소개, 자주묻는질문 입니다.</span></p>
+                        <a href="./ottgi/index.html" target="_blank">사이트 확인하기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Workwrap work3 w3">
+            <h2>Work<span>Chapter 05</span></h2>
+            <div class="swiperwrap">
+                <h3>페이지디자인 & 타이포그래피</h3>
+                <div class="swiper-container">
+                    <div class="swiper-scrollbar"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div>
+                                <img src="./img/promotion1.png" alt="" title="../img/promotion1-1.png">
+                                <span class="slidespa">크리스마스 프로모션 디자인</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <img src="./img/promotion2.png" alt="" title="../img/promotion2-1.png">
+                                <span class="slidespa">설날 프로모션 디자인</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <img src="./img/promotion3.png" alt="" title="../img/promotion3-1.png">
+                                <span class="slidespa">프로모션 디자인</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <img src="./img/snsbanner1.png" alt="" title="../img/snsbanner1-1.png">
+                                <span class="slidespa">SNS페이지 디자인</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <img src="./img/snsbanner2.png" alt="" title="../img/snsbanner2-1.png">
+                                <span class="slidespa">SNS페이지 디자인</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <img src="./img/page1.png" alt="" title="../img/page1-1.png">
+                                <span class="slidespa">상세페이지 디자인</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <img src="./img/page2.png" alt="" title="../img/page2-1.png">
+                                <span class="slidespa">상세페이지 디자인</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <img src="./img/typo1.png" alt="" title="../img/typo1-1.png">
+                                <span class="slidespa">타이포그래피 디자인</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <img src="./img/typo2.png" alt="" title="../img/typo2-1.png">
+                                <span class="slidespa">타이포그래피 디자인</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <img src="./img/typo3.png" alt="" title="../img/typo3-1.png">
+                                <span class="slidespa">타이포그래피 디자인</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Contact">
+        <h2>Contact</h2>
+        <div class="ctext">
+            <h3>저는 이런 사람이에요!</h3>
+            <div class="hashtag">
+                <p class="tag"><span class="bgt"></span><span class="tagt">#책임감</span></p>
+                <p class="tag"><span class="bgt"></span><span class="tagt">#성장</span></p>
+                <p class="tag"><span class="bgt"></span><span class="tagt">#척하면 척</span></p>
+                <p class="tag"><span class="bgt"></span><span class="tagt">#코딩</span></p>
+                <p class="tag"><span class="bgt"></span><span class="tagt">#배우는 것</span></p>
+                <p class="tag"><span class="bgt"></span><span class="tagt">#웹 퍼블리셔</span></p>
+            </div>
+            <div class="ctwrap">
+                <p>맡은일에 <span>책임감</span>을 가지고 임하는 사람</p>
+                <p>계속해서 <span>성장</span>하고 싶어하고 배우는것을 좋아하는 사람</p>
+                <p>한번 제대로 배운것은 <span>척하면 척</span>하는 사람</p>
+                <p><span>코딩</span>하는걸 좋아하는 사람</p>
+                <p>이런 웹 퍼블리셔를 원한다면 저를 찾아주세요!</p>
+                <a href="https://open.kakao.com/o/sGWXiXPd" target="blank" class="kakao">Open kakaotalk</a>
+                <a href="mailto:dlddudlsrks1615@naver.com" class="naver">dlddudlsrks1615@naver.com</a>
+                <div class="w3c">
+                    <p>
+                        <a href="http://validator.kldp.org/check?uri=referer"
+                        onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img
+                        src="//validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="25px" width="110px"></a>
+                    </p>
+                    <p>
+                        <a href="http://css-validator.kldp.org/check/referer">
+                            <img style="border:0;width:110px;height:25px"
+                                src="//css-validator.kldp.org/images/validate/css-blue"
+                                alt="올바른 CSS입니다!" />
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

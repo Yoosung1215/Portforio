@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>빽다방</title>
+  <link rel="stylesheet" href="./css/paiksdessert.css"/>
+ </head>
+ <body>
+	<!-- 헤더 -->
+		<header>
+		<h2 class="hidden">헤더영역</h2>
+		<div id="mein">
+		<h1><a href="./bbackdabang_main.html"><img src="./images/logo.png" alt="빽다방메인로고" style="width:194px; height:66px;" /></a></h1>
+		<div id="util">
+			<ul>
+				<li><a href="">더본코리아</a></li>
+				<li><a href="">매장찾기</a></li>
+				<li><a href="">페이스북</a></li>
+				<li><a href="">인스타그램</a></li>
+			</ul>
+		</div>
+			<nav>
+				<ul id="first">
+					<li class="submenu"><a href="./paikceo.html">빽다방</a>
+						<ul>
+							<li><a href="./paikceo.html">CEO 인사말</a></li>
+							<li><a href="./paikhtmlsoge.html">빽다방 소개</a></li>
+							<li><a href="./paikhtmlcoffee.html">커피이야기</a></li>
+						</ul>
+					</li>
+					<li class="submenu"><a href="./bbackdabang.html">메뉴</a>
+						<ul>
+							<li><a href="./bbackdabang.html">신메뉴</a></li>
+							<li><a href="./index2.html">커피</a></li>
+							<li><a href="./paiksdrink.html">음료</a></li>
+							<li><a href="./paiksdessert.html">아이스크림/디저트</a></li>
+							<li><a href="./paiksccino.html">빽스치노</a></li>
+						</ul>
+					</li>
+					<li class="submenu"><a href="./paikhtml2.html">소식</a>
+						<ul>
+							<li><a href="./paikhtml2.html">소식</a></li>
+							<li><a href="./paikhtml2.html">이벤트</a></li>
+							<li><a href="./paikhtml2.html">친절 우수매장</a></li>
+						</ul>
+					</li>
+					<li class="submenu"><a href="./bbackdabang_community.html">커뮤니티</a>
+						<ul>
+							<li><a href="./bbackdabang_community.html">커피클래스</a></li>
+						</ul>
+					</li>
+					<li class="submenu"><a href="./bbackdabang_information.html">매장안내</a>
+						<ul>
+							<li><a href="./bbackdabang_information.html">매장찾기</a></li>
+						</ul>
+					</li>
+					<li class="submenu"><a href="./index3.html">창업안내</a>
+						<ul>
+							<li><a href="./index3.html">가맹정보 및 절차</a></li>
+						</ul>
+					</li>
+					<li class="submenu"><a href="">고객의 소리</a>
+                    </li>
+                </ul>
+            </nav>
+		</div>
+    <div id="headerfoot">
+    </div>
+	</header>
+	
+	<!-- 비주얼 -->
+	<article>
+		<h2 class="hidden">비주얼영역</h2>
+		<div id="visual">
+		<p>아이스크림/디저트</p>
+		<hr/>
+		<p>오직 빽다방에서만 만나보실 수 있는 시그니처 메뉴입니다.</p>
+		</div>
+		<div id="menu1">
+			<ul>
+				<li><a href="./bbackdabang.html">신메뉴</a></li>
+				<li><a href="./index2.html">커피</a></li>
+				<li><a href="./paiksdrink.html">음료</a></li>
+				<li><a href="./paiksdessert.html">아이스크림/디저트</a></li>
+				<li><a href="./paiksccino.html">빽스치노</a></li>
+			</ul>
+		</div>
+	</article>
+	
+	<!-- 컨텐츠 -->
+	<section>
+		<h2 class="hidden">컨텐츠영역</h2>
+		<h3>추천메뉴</h3><hr/>
+		<div id="best">
+			<ul>
+				<li><a href="">이전</a></li>
+				<li>
+					<div>
+						<h4>공공치빵(파맛)</h4>
+						<span>WATER ROUXCREAM CHEESEBREAD(CHIVES)</span>
+						<hr/>
+						<span>'공'들여 '공'수한 크림'치'즈 '빵' 쫄깃한 빵 속에</span>
+						<br/>
+						<span>크림치즈와 생크림이 듬뿍! 국내산 파가 송송!</span>
+						<br/>
+						<span>(매장 상황에 따라 판매하지 않을 수 있습니다.)</span>
+					</div>
+					<a href="">
+						<dl>
+							<dt>공공치빵(파맛)</dt>
+							<dd>공공치빵(파맛)</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<div>
+						<h4>공공치빵(초코맛)</h4>
+						<span>WATER ROUXCREAM CHEESEBREAD(CHOCO)</span>
+						<hr/>
+						<span>'공'들여 '공'수한 크림'치'즈 '빵' 쫄깃한 빵 속에</span>
+						<br/>
+						<span>크림치즈와 생크림이 듬뿍! 초코크림이 한가득!</span>
+						<br/>
+						<span>(매장 상황에 따라 판매하지 않을 수 있습니다.)</span>
+					</div>
+					<a href="">
+						<dl>
+							<dt>공공치빵(초코맛)</dt>
+							<dd>공공치빵(초코맛)</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<div>
+						<h4>찰떡맛남(예산 사과)</h4>
+						<span>CREAM FILLING GLUTINOUS RICE CAKE(APPLE)</span>
+						<hr/>
+						<span>우리 고장 특산물과 크림 가득 찹쌀떡의 찰떡만남!</span>
+						<br/>
+						<span></span>
+						<br/>
+						<span>(매장 상황에 따라 판매하지 않을 수 있습니다.)</span>
+					</div>
+					<a href="">
+						<dl>
+							<dt>찰떡맛남(예산 사과)</dt>
+							<dd>찰떡맛남(예산 사과)</dd>
+						</dl>
+					</a>
+				</li>
+				<li><a href="">다음</a></li>
+			</ul>
+		</div>
+		<div class="menuli">
+			<ul>
+				<li>
+					<div>
+						<h4>공공치빵(파맛)</h4>
+						<span>WATER ROUXCREAM CHEESEBREAD(CHIVES)</span>
+						<hr/>
+						<span>'공'들여 '공'수한 크림'치'즈 '빵' 쫄깃한 빵 속에</span>
+						<br/>
+						<span>크림치즈와 생크림이 듬뿍! 국내산 파가 송송!</span>
+						<br/>
+						<span>(매장 상황에 따라 판매하지 않을 수 있습니다.)</span>
+					</div>
+					<a href="">
+						<dl>
+							<dt>공공치빵(파맛)</dt>
+							<dd>공공치빵(파맛)</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<div>
+						<h4>공공치빵(초코맛)</h4>
+						<span>WATER ROUXCREAM CHEESEBREAD(CHOCO)</span>
+						<hr/>
+						<span>'공'들여 '공'수한 크림'치'즈 '빵' 쫄깃한 빵 속에</span>
+						<br/>
+						<span>크림치즈와 생크림이 듬뿍! 초코크림이 한가득!</span>
+						<br/>
+						<span>(매장 상황에 따라 판매하지 않을 수 있습니다.)</span>
+					</div>
+					<a href="">
+						<dl>
+							<dt>공공치빵(초코맛)</dt>
+							<dd>공공치빵(초코맛)</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<div>
+						<h4>찰떡맛남(예산 사과)</h4>
+						<span>CREAM FILLING GLUTINOUS RICE CAKE(APPLE)</span>
+						<hr/>
+						<span>우리 고장 특산물과 크림 가득 찹쌀떡의 찰떡만남!</span>
+						<br/>
+						<span></span>
+						<br/>
+						<span>(매장 상황에 따라 판매하지 않을 수 있습니다.)</span>
+					</div>
+					<a href="">
+						<dl>
+							<dt>찰떡맛남(예산 사과)</dt>
+							<dd>찰떡맛남(예산 사과)</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<div>
+						<h4>크리미슈</h4>
+						<span>CREAMY CHOUX</span>
+						<hr/>
+						<span>비스킷과 부드러운 크림의 환상 조합!</span>
+						<br/>
+						<span></span>
+						<br/>
+						<span>(매장 상황에 따라 판매하지 않을 수 있습니다.)</span>
+					</div>
+					<a href="">
+						<dl>
+							<dt>크리미슈</dt>
+							<dd>크리미슈</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<div>
+						<h4>크리미단팥빵</h4>
+						<span>CREAMY RED BEAN BUN</span>
+						<hr/>
+						<span>달콤한 팥과 크림이 듬뿍~</span>
+						<br/>
+						<span></span>
+						<br/>
+						<span>(매장 상황에 따라 판매하지 않을 수 있습니다.)</span>
+					</div>
+					<a href="">
+						<dl>
+							<dt>크리미단팥빵</dt>
+							<dd>크리미단팥빵</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<div>
+						<h4>노말한소프트</h4>
+						<span>SOFT ICE CREAM</span>
+						<hr/>
+						<span>입안에서 부드럽게 사르륵 녹는 마성의</span>
+						<br/>
+						<span>아이스크림</span>
+						<br/>
+						<div class="ingredient">
+							<p>※ 1회 제공량 기준 : 225ml</p>
+							<ul>
+								<li><span>카페인(mg)</span><span>0</span></li>
+								<li><span>칼로리(kcal)</span><span>333</span></li>
+								<li><span>나트륨(mg)</span><span>70</span></li>
+								<li><span>당류(g)</span><span>20</span></li>
+								<li><span>포화지방(g)</span><span>17</span></li>	
+								<li><span>담백질(g)</span><span>4</span></li>
+							</ul>
+						</div>
+						<span>(매장 상황에 따라 판매하지 않을 수 있습니다.)</span>
+					</div>
+					<a href="">
+						<dl>
+							<dt>노말한소프트</dt>
+							<dd>노말한소프트</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<div>
+						<h4>달고나크런치</h4>
+						<span>DALGONA CRUNCH ICE CREAM</span>
+						<hr/>
+						<span>바삭한 달고나와 부드러운 아이스크림이</span>
+						<br/>
+						<span>잘 어울리는 달고나크런치</span>
+						<br/>
+						<div class="ingredient">
+							<p>※ 1회 제공량 기준 : 250ml</p>
+							<ul>
+								<li><span>카페인(mg)</span><span>-</span></li>
+								<li><span>칼로리(kcal)</span><span>434</span></li>
+								<li><span>나트륨(mg)</span><span>122</span></li>
+								<li><span>당류(g)</span><span>605</span></li>
+								<li><span>포화지방(g)</span><span>15</span></li>	
+								<li><span>담백질(g)</span><span>49</span></li>
+							</ul>
+						</div>
+						<span>(매장 상황에 따라 판매하지 않을 수 있습니다.)</span>
+					</div>
+					<a href="">
+						<dl>
+							<dt>달고나크런치</dt>
+							<dd>달고나크런치</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<div>
+						<h4>옥수크림</h4>
+						<span>CORN CRUNCH ICE CREAM</span>
+						<hr/>
+						<span>달콤한 아이스크림에 고소한 옥수수가 톡톡</span>
+						<br/>
+						<span>씹히는 재미난 메뉴</span>
+						<br/>
+						<div class="ingredient">
+							<p>※ 1회 제공량 기준 : 299g</p>
+							<ul>
+								<li><span>카페인(mg)</span><span>0</span></li>
+								<li><span>칼로리(kcal)</span><span>390</span></li>
+								<li><span>나트륨(mg)</span><span>201</span></li>
+								<li><span>당류(g)</span><span>40</span></li>
+								<li><span>포화지방(g)</span><span>15</span></li>	
+								<li><span>담백질(g)</span><span>6</span></li>
+							</ul>
+						</div>
+						<span>(매장 상황에 따라 판매하지 않을 수 있습니다.)</span>
+					</div>
+					<a href="">
+						<dl>
+							<dt>옥수크림</dt>
+							<dd>옥수크림</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<div>
+						<h4>긴페스츄리와플</h4>
+						<span>LONG PASTRY WAFFLE</span>
+						<hr/>
+						<span>약 23cm 길이의 기다란 페스츄리 와플입니다. 겹겹</span>
+						<br/>
+						<span>이 살아있는 버터의 고소판 풍미와 비정제 사탕수수 </span>
+						<br/>
+						<span>원당의 달콤함을 느껴보세요.</span>
+						<br/>
+						<span>(매장 상황에 따라 판매하지 않을 수 있습니다.)</span>
+					</div>
+					<a href="">
+						<dl>
+							<dt>긴페스츄리와플</dt>
+							<dd>긴페스츄리와플</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<div>
+						<h4>큰마들렌</h4>
+						<span>BIG MADELEINE(ORIGINAL)</span>
+						<hr/>
+						<span>약 13cm의 큰!마들렌 촉촉하고 부드러운</span>
+						<br/>
+						<span>플레인 맛으로 커피 메뉴와 함께 즐겨보세요</span>
+						<br/>
+						<span>(매장 상황에 따라 판매하지 않을 수 있습니다.)</span>
+					</div>
+					<a href="">
+						<dl>
+							<dt>큰마들렌</dt>
+							<dd>큰마들렌</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<div>
+						<h4>네모머핀(초콜릿)</h4>
+						<span>SQUARE MUFFIN(CHOCOLATE)</span>
+						<hr/>
+						<span>초코칩이 들어있는 진한 초코 맛 머핀</span>
+						<br/>
+						<span></span>
+						<br/>
+						<span>(매장 상황에 따라 판매하지 않을 수 있습니다.)</span>
+					</div>
+					<a href="">
+						<dl>
+							<dt>네모머핀(초콜릿)</dt>
+							<dd>네모머핀(초콜릿)</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<div>
+						<h4>사라다빵</h4>
+						<span>SALAD BREAD</span>
+						<hr/>
+						<span>어린시절 빵집에서 사먹던 추억의 감자 사다리빵</span>
+						<br/>
+						<span></span>
+						<br/>
+						<div class="ingredient">
+							<p>※ 1회 제공량 기준 : 187.5g</p>
+							<ul>
+								<li><span>카페인(mg)</span><span>0</span></li>
+								<li><span>칼로리(kcal)</span><span>386</span></li>
+								<li><span>나트륨(mg)</span><span>498</span></li>
+								<li><span>당류(g)</span><span>8</span></li>
+								<li><span>포화지방(g)</span><span>5</span></li>	
+								<li><span>담백질(g)</span><span>9</span></li>
+							</ul>
+						</div>
+						<span>(매장 상황에 따라 판매하지 않을 수 있습니다.)</span>
+					</div>
+					<a href="">
+						<dl>
+							<dt>사다리빵</dt>
+							<dd>사다리빵</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<div>
+						<h4>소세지빵</h4>
+						<span>SAUSAGE BREAD</span>
+						<hr/>
+						<span>소시지에 치즈를 듬뿍 얹고 옥수수까지</span>
+						<br/>
+						<span>더한 소세지빵</span>
+						<br/>
+						<div class="ingredient">
+							<p>※ 1회 제공량 기준 : 192.5G</p>
+							<ul>
+								<li><span>카페인(mg)</span><span>0</span></li>
+								<li><span>칼로리(kcal)</span><span>500</span></li>
+								<li><span>나트륨(mg)</span><span>679</span></li>
+								<li><span>당류(g)</span><span>1</span></li>
+								<li><span>포화지방(g)</span><span>11</span></li>	
+								<li><span>담백질(g)</span><span>19</span></li>
+							</ul>
+						</div>
+						<span>(매장 상황에 따라 판매하지 않을 수 있습니다.)</span>
+					</div>
+					<a href="">
+						<dl>
+							<dt>소세지빵</dt>
+							<dd>소세지빵</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<div>
+						<h4>빽그램핫도그</h4>
+						<span>100 G HOT DOG</span>
+						<hr/>
+						<span>육즙 가득 투툼한 100g 소시지가 들어있어 간편한</span>
+						<br/>
+						<span>식사 대용으로 GOOD!</span>
+						<br/>
+						<span>*미판매 매장이 있을 수 있습니다.</span>
+						<br/>
+						<div class="ingredient">
+							<p>※ 1회 제공량 기준 : 900ml</p>
+							<ul>
+								<li><span>카페인(mg)</span><span></span></li>
+								<li><span>칼로리(kcal)</span><span>555</span></li>
+								<li><span>나트륨(mg)</span><span>333</span></li>
+								<li><span>당류(g)</span><span>90</span></li>
+								<li><span>포화지방(g)</span><span>8</span></li>	
+								<li><span>담백질(g)</span><span>15</span></li>
+							</ul>
+						</div>
+						<span>(매장 상황에 따라 판매하지 않을 수 있습니다.)</span>
+					</div>					
+					<a href="">
+						<dl>
+							<dt>빽그램핫도그</dt>
+							<dd>빽그램핫도그</dd>
+						</dl>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- 푸터 -->
+	<div id="footer">
+		<h2 class="hidden">푸터영역</h2>
+		<div>
+			<div id="family"><a href="">패밀리사이트 바로가기</a></div>
+			<h3><a href="">푸터로고</a></h3>
+			<div id="address">
+				<address>
+					<p><span>(주)더본코리아</span><span>사업자등록번호 211-86-00870</span><span>대표이사 백종원</span></p>
+					<p><span>주소:서울시 강남구 봉은사로1길39 유성빌딩5~6층</span><span id="bo">팩스:02-511-3864</span></p>
+					<p><span>본사 대표전화:02-549-3864</span><span>가맹상담전화:02-3447-0410</span><span>고객센터:1544-2360</span></p>
+				</address>
+				<p id="copy">copyright&copy; 2018 theborn korea inc.all rights reserved</p>
+			</div>
+		</div>
+		<h4><a href="">topbutton</a></h4>
+	</div>
+  
+ </body>
+</html>

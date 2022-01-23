@@ -1,0 +1,1118 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <title>오뚜기 메인페이지</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+
+    <style>
+    </style>
+  </head>
+  <script>
+    $(function(){
+      //header start
+      var subdrop = $('.submenu > li > a');
+      var subdropmenu = $('.submenu > li > a').next();
+      subdrop.click(function(){
+        if($(this).next().css('display')=='none'){
+          subdropmenu.fadeOut('fast');
+          $(this).next().fadeIn('fast');
+        }else{
+          subdropmenu.fadeOut('fast');
+        }
+        return false;
+      });
+      $('.submenu3 > li > a').click(function(){
+        if($(this).next().css('display')=='none'){
+          $('.submenu3 > li > a').next().fadeOut('fast');
+          $(this).next().fadeIn('fast');
+        }else{
+          $('.submenu3 > li > a').next().fadeOut('fast');
+        }
+        
+      });
+      $('.drops1 a').click(function(){
+        if($('.n1').css('display')=='none'){
+          $('.navdrop').fadeOut('fast');
+          $('.n1').slideDown();
+        }else{
+          $('.navdrop').fadeOut('fast');
+        }
+        return false;;
+      });
+
+      $('.drops2 a').click(function(){
+        if($('.n2').css('display')=='none'){
+          $('.navdrop').fadeOut('fast');
+          $('.n2').slideDown();
+        }else{
+          $('.navdrop').fadeOut('fast');
+        }
+        return false;;
+      });
+      $('.drops3 a').click(function(){
+        if($('.n3').css('display')=='none'){
+          $('.navdrop').fadeOut('fast');
+          $('.n3').slideDown();
+        }else{
+          $('.navdrop').fadeOut('fast');
+        }
+        
+      });
+      $('.openmenu').click(function(){
+        $('span > i').removeClass('fa-minus').addClass('fa-plus');
+        $('.hmsubbg').slideUp('slow');
+        $('.hmmenu').slideToggle('slow');
+      });
+      $('.hmmenu > li').not($('.hmmenu > li').slice(1,3)).click(function(){
+        $(this).find('span > i').toggleClass('fa-plus fa-minus');
+        $(this).find('.hmsubbg').slideToggle('slow');
+      });
+      //header end
+      $('.bxslider').bxSlider({
+            mode:'fade',
+            captions:true,
+            auto:true,
+            autoControls:true,
+            stopAutoOnclick:true
+      });
+      $('.bxslider1').bxSlider({
+            
+            captions:true,
+            auto:true,
+            autoControls:true,
+            stopAutoOnclick:true
+      });
+      
+      $('.rsp1 .postit a').click(function(){
+        var tg = $(this);
+        var i = tg.index();
+        var content = $('.rsp1 .rspwrap');
+
+
+        content.removeClass('activ');
+        content.eq(i).addClass('activ');
+        content.css('opacity','0').stop().animate({opacity:'1'}, 1000);
+        return false;
+      });
+      $('.rsp2 .postit a').click(function(){
+        var tg = $(this);
+        var i = tg.index();
+        var content = $('.rsp2 .rspwrap');
+
+        content.removeClass('activ');
+        content.eq(i).addClass('activ');
+        content.css('opacity','0').stop().animate({opacity:'1'}, 1000);
+        return false;
+      });
+
+      $('#slider-div').slick({
+            slide: 'div',        //슬라이드 되어야 할 태그 ex) div, li 
+            infinite : true,     //무한 반복 옵션
+            centerMode: true,
+            centerPadding: '250px',
+            slidesToShow : 3,        // 한 화면에 보여질 컨텐츠 개수
+            slidesToScroll : 1,        //스크롤 한번에 움직일 컨텐츠 개수
+            autoplay:true,
+            autoplaySpeed : 7000,         // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+            pauseOnHover : true,        // 슬라이드 이동    시 마우스 호버하면 슬라이더 멈추게 설정
+            draggable : true,     //드래그 가능 여부 
+            
+            
+            responsive: [ // 반응형 웹 구현 옵션
+                {  
+                    breakpoint: 1200, //화면 사이즈 960px
+                    settings: {
+                        //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                        slidesToShow:3,
+                        centerMode:false
+                    } 
+                },
+                {  
+                    breakpoint: 960, //화면 사이즈 960px
+                    settings: {
+                        //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                        slidesToShow:3,
+                        centerMode:false
+                    } 
+                },
+                { 
+                    breakpoint: 768, //화면 사이즈 768px
+                    settings: {    
+                        //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                        slidesToShow:1,
+                        centerMode:false
+                    } 
+                }
+            ]
+        
+        });
+    });
+  </script>
+<body>
+  <!-- header start -->
+  <div class="header">
+    <h1 class="meinlogo">
+      <a href="./index.html"><img src="./img/logo.png" alt=""></a>
+      <div class="snsnav">
+        <a href="#"></a>
+        <a href="#"></a>
+      </div>
+    </h1>
+    <div class="nav">
+      <ul>
+        <li class="drops1">
+          <a href="#">회사소개</a>
+        </li>
+          <li><a href="./index2.html">제품정보</a></li>
+          <li><a href="http://ottogi.okitchen.co.kr/main/main.asp" target="_blank">O'kitchen</a></li>
+          <li class="drops2"><a href="#">홍보센터</a></li>
+          <li class="drops3"><a href="#">고객서비스</a></li>
+          <li><a href="http://www.ottogimall.co.kr" target="_blank">오뚜기몰</a></li>
+      </ul>
+    </div>
+    <div class="navdrop n1">
+      <div>
+        <div class="navdroptext">
+          <h2>
+            <span>회사소개</span>
+            <span class="en">About</span>
+          </h2>
+          <p>365일 웃음 가득, 행복 가득.언제나 고객과<br>함께 합니다.고객이 웃을 때 오뚜기는 행복합니다.</p>
+        </div>
+        <ul class="submenu">
+          <li>
+            <a href="#">(주)오뚜기 ></a>
+            <ul class="subdrop">
+              <li><a href="./index1.html">회사 소개</a></li>
+              <li><a href="#">기업 이념</a></li>
+              <li><a href="#">오뚜기 CI</a></li>
+              <li><a href="#">창업주 풍림 한태호 생애</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">지속가능경영 ></a>
+            <ul class="subdrop">
+              <li><a href="#">사회공헌</a></li>
+              <li><a href="#">환경경영</a></li>
+              <li><a href="#">윤리경영</a></li>
+              <li><a href="#">지배구조</a></li>
+              <li><a href="#">지속가능경영 보고서</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">인재 채용 ></a>
+            <ul class="subdrop">
+              <li><a href="#">인사제도</a></li>
+              <li><a href="#">직무소개</a></li>
+              <li><a href="#">공고 및 입사지원</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">사업장 소개 ></a>
+            <ul class="subdrop">
+              <li><a href="#">국내사업장</a></li>
+              <li><a href="#">해외사업장</a></li>
+              <li><a href="#">중앙연구소</a></li>
+            </ul>
+          </li>
+          <li><a href="#">찾아오시는 길</a></li>
+        </ul>
+        <div class="line"></div>
+        <div class="now">
+          <a href="#">온라인입사지원</a>
+          <a href="#">환경경영 바로가기</a>
+          <a href="#">공장견학신청하기</a> 
+        </div>
+      </div>
+    </div>
+    <div class="navdrop n2">
+      <div>
+        <div class="navdroptext">
+          <h2>
+            <span>홍보센터</span>
+            <span class="en">PR Center</span>
+          </h2>
+          <p>광고로 보는 오뚜기의 역사.<br>TV CF, 지면광고를 통해 오뚜기의 변천사를 <br>보실 수 있습니다.</p>
+        </div>
+        <ul class="submenu">
+          <li>
+            <a href="#">오뚜기 뉴스 ></a>
+            <ul class="subdrop sd2">
+              <li><a href="./index3.html">보도자료</a></li>
+              <li><a href="#">오뚜기소식</a></li>
+              <li><a href="#">코로나19 대응</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">오뚜기 광고 ></a>
+            <ul class="subdrop sd2">
+              <li><a href="#">TV 광고</a></li>
+              <li><a href="#">지면광고</a></li>
+            </ul>
+          </li>
+          <li><a href="#">즐거운 오뚜기</a></li>
+          <li><a href="#">카레 및 향신료 국제 심포지엄</a></li>
+          <li>
+            <a href="#">투자정보 ></a>
+            <ul class="subdrop sd2">
+              <li><a href="#">재무정보</a></li>
+              <li><a href="#">공시정보</a></li>
+            </ul>
+          </li>
+          <li><a href="#">오뚜기 창립 50주년</a></li>
+        </ul>
+        <div class="line"></div>
+        <div class="now">
+          <a href="#">카탈로그 보기</a>
+          <a href="#">투자정보 다운로드</a>
+          <a href="#">제품별 TV CF 보기</a> 
+        </div>
+      </div>
+    </div>
+    <div class="navdrop n3">
+      <div>
+        <div class="navdroptext">
+          <h2>
+            <span>고객서비스</span>
+            <span class="en">Customer</span>
+          </h2>
+          <p>오뚜기는 고객님의 작은 소리에도 귀기울여 듣습니다.<br>오뚜기에 대한 불편하신 사항이나, 문의사항, 제품관련<br>문의사항을 남겨주세요.</p>
+        </div>
+        <ul class="submenu3">
+          <li>
+            <a href="./index4.html">자주 묻는 질문</a>
+          </li>
+          <li>
+            <a href="#">고객 한마디</a>
+          </li>
+          <li>
+            <a href="#">공장 견학 ></a>
+            <ul class="subdrop sd2">
+              <li><a href="#">공장 소개</a></li>
+              <li><a href="#">공장견학 신청</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="line"></div>
+        <div class="now">
+          <a href="#">공장견학 신청</a>
+          <a href="#">견학 공장 위치</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- header end -->
+
+  <!-- headermobile start -->
+  <div class="hmobile">
+    <div class="hmobilewrap">
+      <a href="#" class="openmenu"><img src="./img/icon_all.png" alt="" ></a>
+      <h1 class="headerlogomobile">
+        <a href="./index.html"><img src="./img/logo.png" alt="" style="width: 65px; height: 65px;"></a>
+      </h1>
+      <div class="snsnav">
+        <a href=""></a>
+        <a href=""></a>
+      </div>
+    </div>
+    <ul class="hmmenu">
+      <li>
+        <a href="#">회사소개<span><i class="fas fa-plus"></i></span></a>
+        <div class="hmsubbg">
+          <ul class="hmsub">
+            <li><a href="#">(주)오뚜기</a></li>
+            <li><a href="./index1.html">- 회사 소개</a></li>
+            <li><a href="#">- 기업 이념</a></li>
+            <li><a href="#">- 오뚜기 CI</a></li>
+            <li><a href="#">- 창업주 풍림 함태호 생애</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">지속가능경영</a></li>
+            <li><a href="#">- 사회공헌</a></li>
+            <li><a href="#">- 환경경영</a></li>
+            <li><a href="#">- 윤리경영</a></li>
+            <li><a href="#">- 지배구조</a></li>
+            <li><a href="#">- 지속가능경영 보고서</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">인재 채용</a></li>
+            <li><a href="#">- 인사제도</a></li>
+            <li><a href="#">- 직무소개</a></li>
+            <li><a href="#">- 공고 및 입사지원</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">사업장 소개</a></li>
+            <li><a href="#">- 국내 사업장</a></li>
+            <li><a href="#">- 해외 사업장</a></li>
+            <li><a href="#">- 중앙 연구소</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">찾아오시는 길</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="./index2.html">제품 정보<span><i class="fas fa-plus"></i></span></a>
+      </li>
+      <li>
+        <a href="http://ottogi.okitchen.co.kr/main/main.asp" target="_blank">O'kitchen<span><i class="fas fa-plus"></i></span></a>
+      </li>
+      <li>
+        <a href="#">홍보 센터<span><i class="fas fa-plus"></i></span></a>
+        <div class="hmsubbg">
+          <ul class="hmsub">
+            <li><a href="#">오뚜기 뉴스</a></li>
+            <li><a href="./index3.html">- 보도 자료</a></li>
+            <li><a href="#">- 오뚜기소식</a></li>
+            <li><a href="#">- 코로나19 대응</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">오뚜기광고</a></li>
+            <li><a href="#">- TV광고</a></li>
+            <li><a href="#">- 지면광고</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">즐거운 오뚜기</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">카레 및 향신료 국제 심포지엄</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">투자정보</a></li>
+            <li><a href="#">- 재무정보</a></li>
+            <li><a href="#">- 공시정보</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">오뚜기 창립 50주년</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">고객 서비스<span><i class="fas fa-plus"></i></span></a>
+        <div class="hmsubbg">
+          <ul class="hmsub">
+            <li><a href="./index4.html">자주 묻는 질문</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">고객 한마디</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">공장 견학</a></li>
+            <li><a href="#">- 공장소개</a></li>
+            <li><a href="#">- 공장견학 신청</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="wrapper" class="slider1">
+    <div class="bxslider">
+      <div>
+        <img src="./img/img_visual37.jpg" alt="slider1" /> 
+      </div>
+      <div>
+        <img src="./img/img_visual34.jpg" alt="slider2" />
+      </div>
+      <div>
+        <img src="./img/img_visual35.jpg" alt="slider3" />
+      </div>         
+      <div>
+        <img src="./img/img_visual36.jpg" alt="slider4" />
+      </div>      
+      <div>
+        <img src="./img/img_visual31.jpg" alt="slider5" />
+      </div>      
+      <div>
+        <img src="./img/img_visual32.jpg" alt="slider6" />
+      </div>      
+      <div>
+        <img src="./img/img_visual33.jpg" alt="slider7" />
+      </div>      
+      <div>
+        <img src="./img/img_visual24.jpg" alt="slider8" />
+      </div>      
+      <div>
+        <img src="./img/img_visual15.jpg" alt="slider9" />
+      </div>      
+      <div>
+        <img src="./img/img_visual22.jpg" alt="slider10" />
+      </div>      
+      <div>
+        <img src="./img/img_visual14.jpg" alt="slider11" />
+      </div>     
+    </div>      
+  </div>
+  <div id="wrapper" class="slider2">
+    <div class="bxslider">
+      <div>
+        <img src="./img/img_Mvisual37.jpg" alt="slider1" /> 
+      </div>
+      <div>
+        <img src="./img/img_Mvisual34.jpg" alt="slider2" />
+      </div>
+      <div>
+        <img src="./img/img_Mvisual35.jpg" alt="slider3" />
+      </div>         
+      <div>
+        <img src="./img/img_Mvisual36.jpg" alt="slider4" />
+      </div>      
+      <div>
+        <img src="./img/img_Mvisual31.jpg" alt="slider5" />
+      </div>      
+      <div>
+        <img src="./img/img_Mvisual32.jpg" alt="slider6" />
+      </div>      
+      <div>
+        <img src="./img/img_Mvisual33.jpg" alt="slider7" />
+      </div>      
+      <div>
+        <img src="./img/img_Mvisual24.jpg" alt="slider8" />
+      </div>      
+      <div>
+        <img src="./img/img_Mvisual15.jpg" alt="slider9" />
+      </div>      
+      <div>
+        <img src="./img/img_Mvisual22.jpg" alt="slider10" />
+      </div>      
+      <div>
+        <img src="./img/img_Mvisual14.jpg" alt="slider11" />
+      </div>     
+    </div>      
+  </div>
+  <div class="otgsswrap">
+    <h2>오뚜기 소식</h2>
+    <div class="otgss">
+      <ul>
+        <li class="botc">
+          <a href="#">
+            <dl>
+              <dt><img src="./img/2021-05-27_805369006[5].jpg" alt=""></dt>
+              <dd>[이벤트]</dd>
+              <dd>2021년 하반기 공개채용</dd>
+              <dd>오뚜기 IT 자회사(알디에스(주))채용정보 포함</dd>
+            </dl>
+          </a>
+        </li>
+        <li class="topc">
+          <a href="#">
+            <dl>
+              <dt><img src="./img/2021-05-27_805369006[3].jpg" alt=""></dt>
+              <dd>[이벤트]</dd>
+              <dd>O'kitchen</dd>
+              <dd>오뚜기 제품, 요리명 등 다양하게 검색해보세요!</dd>
+            </dl>
+          </a>
+        </li>
+        <li class="botc">
+          <a href="#">
+            <dl>
+              <dt><img src="./img/se.png" alt=""></dt>
+              <dd>[신제품]</dd>
+              <dd>오즈키친 칠리새우</dd>
+              <dd>겉은 바삭하고 속은 촉촉한 통새우 튀김!</dd>
+            </dl>
+          </a>
+        </li>
+        <li class="topc">
+          <a href="#">
+            <dl>
+              <dt><img src="./img/noodle.png" alt=""></dt>
+              <dd>[신제품]</dd>
+              <dd>순후추라면 사골곰탕맛</dd>
+              <dd>진한 사골국물에 어울리는 순후추와 라면의 만남!</dd>
+            </dl>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="okitchen">
+    <h3>O'kitchen</h3>
+    <div class="rsp1">
+      <div class="postit">
+        <a href="#">카레비프스튜<span></span></a>
+        <a href="#">팬케이크<span></span></a>
+        <a href="#">몬테크리스토<span></span></a>
+        <a href="#">냉파스타<span></span></a>
+      </div>
+      <div class="indexdiv">
+        <div class="rspwrap activ">
+          <div class="rsptext">
+            <h3>카레비프스튜</h3>
+            <p>스튜는 한국의 찌개, 찜, 조림의 중간 성격을 띄는 음식이에요.<br>수많은 스튜 중에서도 가장 유명하고 인기있는 메뉴는 단연 비프스튜!<br>카레와 토마토로 감칠맛을 더하고, 고기의 식감을 살렸어요.<br>바게트, 포카치아 등과 곁들여 먹으면 더 좋아요.</p>
+          </div>
+          <img src="./img/beefstu.png" alt="">
+          <div class="rspbg">
+            <div id="tag">
+              <p>
+                준비시간<br>
+                <span>10</span><br>
+                <span>분</span>
+              </p>
+              <p>
+                조리시간<br>
+                <span>25</span><br>
+                <span>분</span>
+              </p>
+              <p>
+                인분수<br>
+                <span>1</span><br>
+                <span>인분</span>
+              </p>
+            </div>
+            <div id="hashtag">
+              <a href="#">#3일숙성카레</a>
+              <a href="#">#카레맛집</a>
+              <a href="#">#쇠고기</a>
+            </div>
+          </div>
+        </div>
+        <div class="rspwrap">
+          <div class="rsptext">
+            <h3>더치베이비 팬케이크</h3>
+            <p>더치베이비는 독일식 팬케이크로, 가운데가 움푹 파인 모양이 특징인 오븐에 구운 팬케이크예요.<br>신선한 사과와 오뚜기 사과쨈을 넣어 만든 시나몬애플 소스를 얹어 드셔보세요.<br>취향에 따라 생크림을 올려도 좋아요. 커피 한 잔과 함께하면 한 입 한 입이 행복한 브런치가 된답니다.</p>
+          </div>
+          <img src="./img/pancake.png" alt="">
+          <div class="rspbg">
+            <div id="tag">
+              <p>
+                준비시간<br>
+                <span>30</span><br>
+                <span>분</span>
+              </p>
+              <p>
+                조리시간<br>
+                <span>20</span><br>
+                <span>분</span>
+              </p>
+              <p>
+                인분수<br>
+                <span>4</span><br>
+                <span>인분</span>
+              </p>
+            </div>
+            <div id="hashtag">
+              <a href="#">#핫케이크</a>
+              <a href="#">#브런치</a>
+              <a href="#">#계란요리</a>
+            </div>
+          </div>
+        </div>
+        <div class="rspwrap">
+          <div class="rsptext">
+            <h3>몬테크리스토</h3>
+            <p>몬테크리스토는 프랑스식 샌드위치인 크로크무슈가 미국으로 건너가면서 지어진 이름이에요.<br>조금은 생소하지만 여느 샌드위치보다 맛있는 몬테크리스토 레시피를 소개해 드릴게요.<br>겉은 바삭하고 속은 부드러워 식감도 정말 좋고, 달콤하고 짭짤한 맛이 제대로 섞여있어 중독되는 맛이에요.<br>유명 레스토랑 부럽지 않은 브런치를 즐기고 싶은 분들에게 추천드려요.</p>
+          </div>
+          <img src="./img/monte.png" alt="">
+          <div class="rspbg">
+            <div id="tag">
+              <p>
+                준비시간<br>
+                <span>5</span><br>
+                <span>분</span>
+              </p>
+              <p>
+                조리시간<br>
+                <span>10</span><br>
+                <span>분</span>
+              </p>
+              <p>
+                인분수<br>
+                <span>3</span><br>
+                <span>인분</span>
+              </p>
+            </div>
+            <div id="hashtag">
+              <a href="#">#토스트</a>
+              <a href="#">#브런치</a>
+              <a href="#">#단짠단짠</a>
+            </div>
+          </div>
+        </div>
+        <div class="rspwrap">
+          <div class="rsptext">
+            <h3>토마토 냉파스타</h3>
+            <p>냉파스타가 낯설게 느껴지시나요? 시원한 토마토 파스타 샐러드라고 생각해주세요.<br>차가운 파스타의 쫀득한 식감과 토마토, 꿀, 치즈의 조합이 찰떡이랍니다.<br>키자니아 오뚜기 쿠킹스쿨에서 많은 사랑을 받았던 메뉴로,아이들과 함께 만들기에도 좋아요.<br>조금 더 가볍게 즐기고 싶다면, 파스타 대신 브로콜리 양을 더 늘려보세요.</p>
+          </div>
+          <img src="./img/neangpasta.png" alt="">
+          <div class="rspbg">
+            <div id="tag">
+              <p>
+                준비시간<br>
+                <span>20</span><br>
+                <span>분</span>
+              </p>
+              <p>
+                조리시간<br>
+                <span>5</span><br>
+                <span>분</span>
+              </p>
+              <p>
+                인분수<br>
+                <span>1</span><br>
+                <span>인분</span>
+              </p>
+            </div>
+            <div id="hashtag">
+              <a href="#">#파스타샐러드</a>
+              <a href="#">#브런치</a>
+              <a href="#">#파티요리</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rsp2">
+      <div class="postit">
+        <a href="#">떡만둣국<span></span></a>
+        <a href="#">순두부짜글이<span></span></a>
+        <a href="#">차돌된장찌개<span></span></a>
+        <a href="#">육개장칼국수<span></span></a>
+      </div>
+      <div class="indexdiv">
+        <div class="rspwrap activ">
+          <div class="rsptext">
+            <h3>떡만둣국</h3>
+            <p>멸치장국 베이스로 국물이 맑은 타입의 떡만둣국이에요.<br>만두피가 얇은 굴림만두로 끓이면,<br>만두소에 있는 고기와 채소의 감칠맛이 국물로 우러나와 더욱 맛있답니다.</p>
+          </div>
+          <img src="./img/mandoguk.png" alt="">
+          <div class="rspbg">
+            <div id="tag">
+              <p>
+                준비시간<br>
+                <span>3</span><br>
+                <span>분</span>
+              </p>
+              <p>
+                조리시간<br>
+                <span>10</span><br>
+                <span>분</span>
+              </p>
+              <p>
+                인분수<br>
+                <span>4</span><br>
+                <span>인분</span>
+              </p>
+            </div>
+            <div id="hashtag">
+              <a href="#">#따끈한국물</a>
+              <a href="#">#설날</a>
+              <a href="#">#한식</a>
+            </div>
+          </div>
+        </div>
+        <div class="rspwrap">
+          <div class="rsptext">
+            <h3>삼겹살 순두부짜글이</h3>
+            <p>얼큰한 국물에 몽글몽글한 식감의 순두부가 가득 들어 있는 순두부찌개는 누구나 좋아하는 음식이죠.<br>그런데, 삼겹살과 함께 자작하게 끓여낸 순두부 짜글이도 정말 별미란 사실 알고 계셨나요?<br>쫄깃한 고기와 부드러운 순두부의 찰떡궁합은 집나간 입맛도 돌아오게 해줘요.<br>오뚜기 파우치양념장과 함께 간단하고 맛있게 끓여낸 순두부 짜글이로 오늘 저녁 어떠세요?</p>
+          </div>
+          <img src="./img/sunjjaglee.png" alt="">
+          <div class="rspbg">
+            <div id="tag">
+              <p>
+                준비시간<br>
+                <span>10</span><br>
+                <span>분</span>
+              </p>
+              <p>
+                조리시간<br>
+                <span>10</span><br>
+                <span>분</span>
+              </p>
+              <p>
+                인분수<br>
+                <span>3</span><br>
+                <span>인분</span>
+              </p>
+            </div>
+            <div id="hashtag">
+              <a href="#">#따끈한국물</a>
+              <a href="#">#얼큰칼칼</a>
+              <a href="#">#한식</a>
+            </div>
+          </div>
+        </div>
+        <div class="rspwrap">
+          <div class="rsptext">
+            <h3>차돌박이 된장찌개</h3>
+            <p>고깃집에서 먹는 된장찌개맛을 그대로 재현할 수 있는 마법의 레시피랍니다.<br>건조된 즉석된장국을 사용하기 때문에, 캠핑요리로 제격이에요.<br>건더기는 기호에 따라 추가해주어도 좋아요.<br>조금 더 매콤한 맛을 원한다면 청양고추를 더해주세요.</p>
+          </div>
+          <img src="./img/chadol.png" alt="">
+          <div class="rspbg">
+            <div id="tag">
+              <p>
+                준비시간<br>
+                <span>10</span><br>
+                <span>분</span>
+              </p>
+              <p>
+                조리시간<br>
+                <span>10</span><br>
+                <span>분</span>
+              </p>
+              <p>
+                인분수<br>
+                <span>2</span><br>
+                <span>인분</span>
+              </p>
+            </div>
+            <div id="hashtag">
+              <a href="#">#따끈한국물</a>
+              <a href="#">#얼큰칼칼</a>
+              <a href="#">#집밥</a>
+            </div>
+          </div>
+        </div>
+        <div class="rspwrap">
+          <div class="rsptext">
+            <h3>육개장 칼국수</h3>
+            <p>비오는 날, 요리는 하기 싫은데 칼칼한 칼국수 한그릇이 땡길 때 다들 있지 않으신가요?<br>여러분들께 즉석 제품을 이용해서 아주 간단하게 만들 수 있는 맛있는 육개장 칼국수를 소개해 드립니다.<br>조금 더 육개장의 느낌을 내고 싶다면 냄비에 기름을 두르고, 대파를 볶아 대파기름을 만들어 시작하면 된답니다!</p>
+          </div>
+          <img src="./img/calguksu.png" alt="">
+          <div class="rspbg">
+            <div id="tag">
+              <p>
+                준비시간<br>
+                <span>5</span><br>
+                <span>분</span>
+              </p>
+              <p>
+                조리시간<br>
+                <span>10</span><br>
+                <span>분</span>
+              </p>
+              <p>
+                인분수<br>
+                <span>2</span><br>
+                <span>인분</span>
+              </p>
+            </div>
+            <div id="hashtag">
+              <a href="#">#따끈한국물</a>
+              <a href="#">#얼큰칼칼</a>
+              <a href="#">#집밥</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hotitemwrap">
+    <div class="hotitem">
+      <div id="wrapper" class="hts">
+        <h3>오뚜기 인기상품</h3>
+        <div class="bxslider1">
+          <div>
+            <ul>
+              <li>
+                <a href="#">
+                  <dl>
+                    <dt><img src="./img/rjj.jpg" alt=""></dt>
+                    <dd>라조장 양파</dd>
+                    <dd>식용유지 > 고추맛기름</dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <dl>
+                    <dt><img src="./img/jrm.jpg" alt=""></dt>
+                    <dd>진라면 매운맛</dd>
+                    <dd>라면류 > 진라면 매운맛</dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <dl>
+                    <dt><img src="./img/tmtss.jpg" alt=""></dt>
+                    <dd>프레스코 토마토<br>스파게티 소스</dd>
+                    <dd>조미소스/식품 > 스파게티 소스</dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <dl>
+                    <dt><img src="./img/jbbm.jpg" alt=""></dt>
+                    <dd>진비빔면</dd>
+                    <dd>라면류 > 진비빔면</dd>
+                  </dl>
+                </a>
+              </li>
+            </ul> 
+          </div>
+          <div>
+            <ul>
+              <li>
+                <a href="#">
+                  <dl>
+                    <dt><img src="./img/bsbggj.jpg" alt=""></dt>
+                    <dd>오즈키친 버섯불고기죽</dd>
+                    <dd>레토르트/간편식 > 파우치죽</dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <dl>
+                    <dt><img src="./img/ysisp.jpg" alt=""></dt>
+                    <dd>양송이 크림스프<br>270g(상온)</dd>
+                    <dd>레토르트/간편식 > 렌지</dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <dl>
+                    <dt><img src="./img/dggbgt.jpg" alt=""></dt>
+                    <dd>부산식 돼지국밥 곰탕</dd>
+                    <dd>레토르트/간편식 > 국탕찌개류</dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <dl>
+                    <dt><img src="./img/3bcr.jpg" alt=""></dt>
+                    <dd>3분카레(매운맛)</dd>
+                    <dd>레토르트/간편식 > 3분</dd>
+                  </dl>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>
+                <a href="#">
+                  <dl>
+                    <dt><img src="./img/tmtmtb.jpg" alt=""></dt>
+                    <dd>오즈키친 토마토 미트볼<br>(렌지)</dd>
+                    <dd>레토르트/간편식 > 렌지</dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <dl>
+                    <dt><img src="./img/dhbsp.jpg" alt=""></dt>
+                    <dd>단호박 크림스프<br>270g(상온)</dd>
+                    <dd>레토르트/간편식 > 렌지</dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <dl>
+                    <dt><img src="./img/cbpz.jpg" alt=""></dt>
+                    <dd>콤비네이션 피자</dd>
+                    <dd>냉장/냉동식품 > 냉동피자</dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <dl>
+                    <dt><img src="./img/jjjr.jpg" alt=""></dt>
+                    <dd>진진짜라</dd>
+                    <dd>라면류 > 진진짜라</dd>
+                  </dl>
+                </a>
+              </li>
+            </ul>
+          </div>         
+          <div>
+            <ul>
+              <li>
+                <a href="#">
+                  <dl>
+                    <dt><img src="./img/myns.jpg" alt=""></dt>
+                    <dd>골드마요네스</dd>
+                    <dd>조미소스/식품 > 마요네스</dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <dl>
+                    <dt><img src="./img/bscr.jpg" alt=""></dt>
+                    <dd>백세카레 (약간매운맛)</dd>
+                    <dd>분말/건조식품 > 카레</dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <dl>
+                    <dt><img src="./img/csp.jpg" alt=""></dt>
+                    <dd>콘크림스프 270g(상온)</dd>
+                    <dd>레토르트/간편식 > 렌지</dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <dl>
+                    <dt><img src="./img/cgr.jpg" alt=""></dt>
+                    <dd>순백 참기름</dd>
+                    <dd>식용유지 > 참기름</dd>
+                  </dl>
+                </a>
+              </li>
+            </ul>
+          </div>      
+          <div>
+            <ul>
+              <li>
+                <a href="#">
+                  <dl>
+                    <dt><img src="./img/dgsss.jpg" alt=""></dt>
+                    <dd>경양식 돈까스소스</dd>
+                    <dd>조미식품/소스 > 육류소스</dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <dl>
+                    <dt><img src="./img/gcab.jpg" alt=""></dt>
+                    <dd>맛있는 오뚜기 컵밥 톡<br>톡김치알밥</dd>
+                    <dd>레토르트/간편식 > 컵밥</dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <dl>
+                    <dt><img src="./img/brt.jpg" alt=""></dt>
+                    <dd>벨라티 허니자몽블랙티</dd>
+                    <dd>다류 > 액상</dd>
+                  </dl>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>      
+      </div>
+    </div>
+    <div class="otgm">
+      <a href="#">오뚜기몰<br>바로가기</a>
+    </div>
+  </div>
+  <section class="timeline">
+    <div class="timetop">
+        <h3>Ottogi Timeline</h3>
+    </div>
+    <div class="timephone" id="slider-div">
+        <div class="time">
+            <a href="#">
+                <div class="timeimg"><img src="./images/2021 연말 이벤트 3탄 오뚜기가 야심차게 준비한 연말 BIG 이.jpg" alt=""></div>
+                <div class="timetext">
+                    <h4>#Instagram</h4>
+                    <p>2021 연말 이벤트 3차 오뚜기가 야심차게 준비했다!</p>
+                    <p>2021.11.30</p>
+                </div>
+            </a>
+        </div>
+        <div class="time">
+            <a href="#">
+                <div class="timeimg"><img src="./images/면치기 아니고 연치기 싱싱한 연어 국수에 타바스코 뿌리고 후루룩-.jpg" alt=""></div>
+                <div class="timetext">
+                    <h4>#Facebook</h4>
+                    <p>면치기 아니고 연치기 싱싱한 연어국수에 타바스코..</p>
+                    <p>2021.11.28</p>
+                </div>
+            </a>
+        </div>
+        <div class="time">
+            <a href="#">
+                <div class="timeimg"><img src="./images/2021-11-26_1024088388[1].jpg" alt=""></div>
+                <div class="timetext">
+                    <h4>#Instagram</h4>
+                    <p>겨울맞이 홈카페 OPEN!!</p>
+                    <p>2021.11.28</p>
+                </div>
+            </a>
+        </div>
+        <div class="time">
+            <a href="#">
+                <div class="timeimg"><img src="./images/2021-11-26_1024088388[8].jpg" alt=""></div>
+                <div class="timetext">
+                    <h4>#Facebook</h4>
+                    <p>11월 22일 한국's 김치의 날</p>
+                    <p>2021.11.22</p>
+                </div>
+            </a>
+        </div>
+        <div class="time">
+            <a href="#">
+                <div class="timeimg"><img src="./images/2021-11-26_1024088388[10].jpg" alt=""></div>
+                <div class="timetext">
+                    <h4>#Facebook</h4>
+                    <p>[태그이벤트] 정갈한 한 상차림 만들어주는 원목우드</p>
+                    <p>2021.11.05</p>
+                </div>
+            </a>
+        </div>
+        <div class="time">
+        <a href="#">
+            <div class="timeimg"><img src="./images/2021-11-26_1024088388[2].jpg" alt=""></div>
+            <div class="timetext">
+                <h4>#Instagram</h4>
+                <p>집에서 즐기는 제주 한 상 취향저격!</p>
+                <p>2021.11.05</p>
+            </div>
+        </a>
+        </div>
+    </div>
+</section>
+    <div class="footer">
+      <div class="footernavwrap">
+        <div>
+          <ul class="footernav">
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">고객상담</a></li>
+            <li><a href="#">찾아오시는 길</a></li>
+            <li><a href="#">오뚜기몰</a></li>
+          </ul>
+          <ul class="footersns">
+            <li><a href="#"><img src="./img/insta_icon.png" alt=""></a></li>
+            <li><a href="#"><img src="./img/blog_icon.png" alt=""></a></li>
+            <li><a href="#"><img src="./img/btn_ff.png" alt=""></a></li>
+            <li><a href="#"><img src="./img/btn_yt.png" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footeraddresswrap">
+        <div class="address">
+          <img src="./img/f_logo.jpg" alt="" style="width: 161px; height: 56px;">
+          <div class="foottext">
+            <ul>
+              <li>(주)오뚜기</li>
+              <li>사업자등록번호 : 138-81-03238</li>
+              <li>대표이사 황성만</li>
+              <li>주소 (14060) 경기도 안양시 동안구 흥안대로 405 (평촌동 160)</li>
+              <li>오뚜기 고객상담실 : 080-024-2311</li>
+              <li>오뚜기라면 고객상담실 : 080-088-1212 (월~금 08:30~17:00)</li>
+            </ul>
+            <p>Copyright ⓒ OTTOGI CORPORATION.,Ltd All Rights Reserved.</p>
+          </div>
+          <img src="./img/2014_WA_mark2.gif" alt="" style="width: 300px; height: 59px;">
+        </div>
+      </div>
+    </div>
+</body>
+</html>

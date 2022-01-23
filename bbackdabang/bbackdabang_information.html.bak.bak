@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>빽다방</title>
+  <link rel="stylesheet" href="./css/index.css"/>
+    <link rel="stylesheet" href="./css/information.css"/>
+ </head>
+ <body>
+	<!-- 헤더 -->
+	<header>
+		<h2 class="hidden">헤더영역</h2>
+	<div id="util">
+		<h1 id="logo">빽다방메인로고</h1>
+		<nav id="nav1">
+			<ul id="ul1">
+				<li><a href="">더본코리아</a></li>
+				<li><a href="">매장찾기</a></li>
+				<li><a href="">페이스북</a></li>
+				<li><a href="">인스타그램</a></li>
+			</ul>
+			<ul id="ul2">
+				<li><a href="">빽다방</a></li>
+				<li><a href="">메뉴</a></li>
+				<li><a href="">소식</a></li>
+				<li><a href="">커뮤니티</a></li>
+				<li><a href="">매장안내</a></li>
+				<li><a href="">창업안내</a></li>
+				<li><a href="">고객의소리</a></li>
+			</ul>
+		</nav>
+		</div>
+	<div id="util2">
+		<nav id="nav2">
+			<div>
+				<ul>
+					<li><a href="">CEO 인사말</a></li>
+					<li><a href="">빽다방 소개</a></li>
+					<li><a href="">커피이야기</a></li>
+				</ul>
+				<ul>
+					<li><a href="">신메뉴</a></li>
+					<li><a href="">커피</a></li>
+					<li><a href="">음료</a></li>
+					<li><a href="">아이스크림/디저트</a></li>
+					<li><a href="">빽스치노</a></li>
+				</ul>
+				<ul>
+					<li><a href="">소식</a></li>
+					<li><a href="">이벤트</a></li>
+					<li><a href="">친절 우수매장</a></li>
+				</ul>
+				<ul>
+					<li><a href="">커피클래스</a></li>
+				</ul>
+				<ul>
+					<li><a href="">매장찾기</a></li>
+				</ul>
+				<ul>
+				<li><a href="">가맹정보 및 절차</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	</header>
+	
+	<!-- 비주얼 -->
+	<article>
+		<h2 class="hidden">비주얼영역</h2>
+		<div id="visual">
+		<p>매장찾기</p>
+		<hr/>
+		<p>원하시는 지역의 매장을 검색해 보세요!</p>
+		</div>
+	</article>
+	
+	<!-- 컨텐츠 -->
+	<section>
+		<h2 class="hidden">컨텐츠영역</h2>
+			
+		<fieldset>
+			<div class="search">
+				<span>지역검색</span>
+				<form class="city">
+					<select>
+						<option>전체</option>
+						<option>서울특별시</option>
+						<option>경기도</option>
+						<option>인천광역시</option>
+						<option>대전광역시</option>
+						<option>충청북도</option>
+						<option>충청남도</option>
+						<option>강원도</option>
+						<option>경상북도</option>
+						<option>경상남도</option>
+						<option>제주도</option>
+						<option>울산광역시</option>
+						<option>부산광역시</option>
+						<option>광주광역시</option>
+						<option>전라북도</option>
+						<option>전라남도</option>
+						<option>대구광역시</option>
+						<option>세종특별자치시</option>
+					</select>
+				</form>
+				<form class="county">
+					<select>
+						<option>전체</option>
+						<option>강남구</option>
+						<option>강동구</option>
+						<option>강북구</option>
+						<option>강서구</option>
+						<option>관악구</option>
+						<option>광진구</option>
+						<option>구로구</option>
+						<option>금천구</option>
+						<option>노원구</option>
+						<option>도봉구</option>
+						<option>동대문구</option>
+						<option>동작구</option>
+						<option>마포구</option>
+						<option>서대문구</option>
+						<option>서초구</option>
+						<option>성동구</option>
+						<option>성북구</option>
+					</select>
+				</form>
+				<span class="store">매장명 검색</span>
+				<div class="store_search">
+					<form>
+						<input type="search"/>
+						<input type="image" src="./images_information/search-ico.png" alt="검색"/>
+					</form>
+				</div>
+			</div>
+		</fieldset>
+		<p>총 <span>916</span>개의 매장이 있습니다.</p>
+		<table>
+			<thead>
+				<tr>
+					<th>지역</th>
+					<th>매장명</th>
+					<th>주소</th>
+					<th>전화번호</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>서울특별시</td>
+					<td>돈암점</td>
+					<td>서울특별시 성북구 동선동4가 98-2</td>
+					<td>02-953-2351</td>
+					<td></td>
+				</tr>
+				<tr class="sub_table">
+					<td colspan="5">
+						<div>
+							<div><img src="./images_information/20210923_010812.jpg" alt="매장사진">
+							</div>
+							<div>
+								<ul>
+									<li><span>위치</span><span>서울특별시 성북구 동선동4가 98-2</span></li>
+								</ul>
+							</div>
+						<div>
+					</td>
+				</tr>
+				<tr>
+					<td>인천광역시</td>
+					<td>인천서운산업단지점</td>
+					<td>인천광역시 계양구 서운산단로 3길 4,sb타워 107호</td>
+					<td>032-555-9313</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>경기도</td>
+					<td>하남미사역점</td>
+					<td>경기도 하남시 미사강변동로 85(망월동1106), 힐스테이트 에코 미사 111호</td>
+					<td>031-796-2329</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>대전광역시</td>
+					<td>대전용운에코포레점</td>
+					<td>대전광역시 동구 용운동 297 1층</td>
+					<td>042-285-5552</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>경기도</td>
+					<td>동탄영천K밸리점</td>
+					<td>경기도 화성시 동탄첨단산업1로 14, 동탄케이벨리 1층 112호</td>
+					<td>031-612-7161</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>충청북도</td>
+					<td>충북혁신도시진천점</td>
+					<td>충청북도 진천군 덕산읍 시가로 14</td>
+					<td>043-535-8672</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>충청북도</td>
+					<td>청주테크노폴리스점</td>
+					<td>충청북도 청주시 흥덕구 송화로184번길 4, 102호</td>
+					<td>043-260-2389</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>서울특별시</td>
+					<td>강남역CGV점</td>
+					<td>서울특별시 강남구 테헤란로1길 48</td>
+					<td>02-566-5353</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>경기도</td>
+					<td>별내파라곤스퀘어점</td>
+					<td>경기도 남양주시 별내동 975-4 별내파라곤스퀘어 1층 C112호</td>
+					<td>031-931-1443</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>경상북도</td>
+					<td>경북고령중앙점</td>
+					<td>경상북도 고령군 대가야읍 중앙로 13-1 (구. 헌무누리 234번지)</td>
+					<td>054-906-9828</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="number">
+			<ul>
+				<li><a href="">1</a></li>
+				<li><a href="">2</a></li>
+				<li><a href="">3</a></li>
+				<li><a href="">4</a></li>
+				<li><a href="">5</a></li>
+				<li><a href=""><img src="./images_information/board_arr.png" alt="다음페이지"/></a></li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- 푸터 -->
+	<div id="footer">
+		<h2 class="hidden">푸터영역</h2>
+		<div>
+			<div id="family"><a href="">패밀리사이트 바로가기</a></div>
+			<h3><a href="">푸터로고</a></h3>
+			<div id="address">
+				<address>
+					<p><span>(주)더본코리아</span><span>사업자등록번호 211-86-00870</span><span>대표이사 백종원</span></p>
+					<p><span>주소:서울시 강남구 봉은사로1길39 유성빌딩5~6층</span><span id="bo">팩스:02-511-3864</span></p>
+					<p><span>본사 대표전화:02-549-3864</span><span>가맹상담전화:02-3447-0410</span><span>고객센터:1544-2360</span></p>
+				</address>
+				<p id="copy">copyright&copy; 2018 theborn korea inc.all rights reserved</p>
+			</div>
+		</div>
+		<h4><a href=""></a></h4>
+	</div>
+  
+ </body>
+</html>

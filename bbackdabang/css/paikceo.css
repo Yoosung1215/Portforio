@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+/* �ʱ�ȭ */
+body,header,article,section,footer,h1,h2,h3,p,nav,div,ul,li,table,tr,th,td{margin:0; padding:0;}
+ul,li{list-style:none;}
+a{text-decoration:none; color: black;}
+.hidden{display:none;}
+
+/* ������� */
+header{width:100%; height:123px; background-color:#fff; padding-top:20px; position:fixed; z-index: 999;}
+.submenu{
+    position: relative;
+}
+.submenu > ul{
+    width: 100%;
+    padding-top: 20px;
+    height: 157px;
+    display: none;
+    position: absolute;
+    top: 58px;
+}
+div#headerfoot{
+    position: absolute;
+    display: none;
+    top: 143px;
+    z-index: -1;
+    width: 100%; height:157px; background: url(../images/menu-bg.jpg);
+}
+div#yellow{display: none; width: 100%; height: 177px; background-color: aqua;}
+
+/* util */
+header div#mein{width:1150px; height:103px; background-color:#fff; margin:0 auto;}
+header div#mein h1{width:194px; height:66px; float:left; margin-top:16px; margin-left:-7px;}
+header div#mein div#util{float:right; width:232px; height:20px; font-size:11px; margin-top:7px; margin-right:10px;}
+header div#mein div#util ul li{float:left; line-height:20px;}
+header div#mein div#util ul li a{color:gray;}
+header div#mein div#util ul li:nth-child(1)::after{content:""; display:block; width:1px; height:10px; background:gray; float:right; margin-left:13px; margin-right:19px; margin-top:5px;}
+header div#mein div#util ul li:nth-child(2)::after{content:""; display:block; width:1px; height:10px; background:gray; float:right; margin-left:15px; margin-right:21px; margin-top:5px;}
+header div#mein div#util ul li:nth-child(3){width:20px; height:20px; background:url(../images/facebook-ico.png) no-repeat; background-size:cover; text-indent:-9999px; margin-right:22px;}
+header div#mein div#util ul li:nth-child(4){width:20px; height:20px; background:url(../images/insta-ico.png) no-repeat; background-size:cover; text-indent:-9999px;}
+
+/* nav */
+header div#mein nav{width:826px; height:183px; float:right; margin-top: 38px; margin-right: 8px;}
+header div#mein nav ul#first > li{float:left; font-size: 13px; font-weight: bold; }
+header div#mein nav ul#first li ul{font-weight:normal;}
+header div#mein nav ul#first li ul li{margin-bottom: 8px; font-size: 14px;}
+header div#mein nav ul#first li ul li:hover{font-weight: bold; font-size: 14px;}
+header div#mein nav ul#first li:nth-child(1){width:124px;}
+header div#mein nav ul#first li:nth-child(2){width:109px;}
+header div#mein nav ul#first li:nth-child(3){width:110px;}
+header div#mein nav ul#first li:nth-child(4){width:138px;}
+header div#mein nav ul#first li:nth-child(5){width:137px;}
+header div#mein nav ul#first li:nth-child(6){width:137px;}
+header div#mein nav ul#first li:nth-child(7){width:71px;}
+header div#mein nav ul#first  li ul{width:72px;}
+header div#mein nav ul#first li:hover ul{background:url(../images/menu-arr.png) no-repeat;}
+header div#mein nav ul#first > li > ul:nth-child(5){background:url(../images/menu-arr.png) no-repeat center top;}
+
+
+
+
+/* ���־󿵿� */
+
+/* div#meintext */
+article{width:100%; height: 500px; background:url(../images/bg-about.jpg) center; background-size: cover; position:relative; top:123px;}
+article div#meintext{position: absolute; width: 1000px; height: 131px; top:160px; left:50%; margin-left:-500px; text-align: center; color:black}
+article div#meintext h3{height:40px; font-size:44px; font-weight: lighter; padding-top:20px;}
+article div#meintext div{width: 40px; height: 2px; background-color: black; margin: 45px auto 35px;}
+article div#meintext p{font-size:18px;}
+/* div#artmenu */
+article div#artmenu{width: 510px; height: 38px;position: absolute;  margin-top: 420px; margin-left: -255px; left:50%;}
+article div#artmenu ul{width:510px; height: 38px; text-align: center; line-height: 34px; font-size:16px;}
+article div#artmenu ul li{width: 170px; height:38px; background-color: #fff; float:left; border:1px solid gray; box-sizing: border-box;}
+article div#artmenu ul li a{color:gray; display:block; width: 170px; height: 38px;}
+article div#artmenu ul li:nth-child(1){border-right:none; background-color: #ffe600;}
+article div#artmenu ul li:nth-child(1) a{color:black;}
+article div#artmenu ul li:nth-child(2){border-right:none;}
+article div#artmenu ul li:nth-child(2):hover{background-color: #ffe600;}
+article div#artmenu ul li:nth-child(2):hover a{color:black;}
+article div#artmenu ul li:nth-child(3):hover{background-color: #ffe600;}
+article div#artmenu ul li:nth-child(3):hover a{color:black;}
+/* 32 188 */
+/* ���������� */
+section{position: relative; top:123px; width:100%; height:1069px; background-color: #f8f8f8; overflow:hidden;}
+section div#bag1{width:1910px; height:1069px; background-color:#f8f8f8; margin:0 auto;}
+section div#bag1 div#bag2{width:1668px; height:1069px; margin:0 auto; background-color:#fff; padding-top:65px; box-sizing:border-box;}
+section div#bag1 div#bag2 div#bag3{width:1125px; height:890px; margin:0 auto;}
+section div#bag1 div#bag2 div#bag3 img{display:block; width:328px; height:34px; margin:0 auto;}
+section div#bag1 div#bag2 div#bag3 div#sectext{width:1125px; height:1004px; margin-top:63px; background-color:#FFF; float:right;}
+section div#bag1 div#bag2 div#bag3 div#sectext div#leftimg{width:538px; height:794px; float:left;}
+section div#bag1 div#bag2 div#bag3 div#sectext div#leftimg img{width:538px; height:523px; float:left;}
+section div#bag1 div#bag2 div#bag3 div#sectext div#leftimg div h4{font-size: 20px; color:#00196F; width:200px; height: 30px; float: left}
+section div#bag1 div#bag2 div#bag3 div#sectext div#leftimg div > div{float: left;}
+section div#bag1 div#bag2 div#bag3 div#sectext div#leftimg div > div > ul{float:left; font-size:12px;}
+section div#bag1 div#bag2 div#bag3 div#sectext div#leftimg div > div > ul:first-child > li::before{content: ""; float:left;display: block; width:3px; height: 3px; background-color: #3D3D3D; margin-top: 11px; margin-right: 3px;}
+section div#bag1 div#bag2 div#bag3 div#sectext div#leftimg div > div > ul:last-child > li::before{content: ""; float:left;display: block; width:3px; height: 3px; background-color: darkgray; margin-top: 7px; margin-right: 3px;}
+section div#bag1 div#bag2 div#bag3 div#sectext div#leftimg div > div > ul:first-child{width: 170px; height: 200px; line-height: 19px; color:gray;}
+section div#bag1 div#bag2 div#bag3 div#sectext div#leftimg div > div > ul:first-child > li > b{color:black;}
+section div#bag1 div#bag2 div#bag3 div#sectext div#leftimg div > div > ul:last-child{width: 366px; height: 200px; line-height: 19px; color:gray;}
+section div#bag1 div#bag2 div#bag3 div#sectext div#righttext{width:538px; height:794px; float:right; }
+section div#bag1 div#bag2 div#bag3 div#sectext div#righttext h3{font-size:30px; width:538px; height:106px; padding-top:25px; font-weight:normal; color:#00196F;}
+section div#bag1 div#bag2 div#bag3 div#sectext div#righttext h3:after{content:""; display:block; width:37px; height:2px; background-color:darkblue; margin:32px 0;}
+section div#bag1 div#bag2 div#bag3 div#sectext div#righttext p{font-size:14px; margin-top:40px; line-height:24px;}
+div#righttext > div#foottext{width:100%; height:65px;}
+div#righttext > div#foottext > div{width:154px; height:65px; float:left; text-align:right; font-size:14px;}
+section div#bag1 div#bag2 div#bag3 div#sectext div#righttext > div#foottext > img{width:145px; height:65px; float: left; margin-top: 30px; margin-left: 25px;}
+section div#bag1 div#bag2 div#bag3 div#sectext div#righttext > div#foottext b{font-size:20px; word-spacing: -3px;}
+
+/* Ǫ�Ϳ��� */
+
+div#footer{height:257px; border-top:3px solid #ffeb00; margin-top:123px;}
+div#footer > div{width:1150px; height:254px; border:0; margin:auto;}
+
+
+div#footer h3{width:179px; height:47px; margin:30px auto; text-indent:-9999px; background:url(../images/flogo.png); background-size:cover; margin-bottom:35px;}
+div#footer div#address{width:516px; height:142px; margin:auto; text-align:center;}
+div#footer div address{font-style:normal; line-height:22px; font-size:12px; margin-bottom:40px;}
+div#footer div address span{border-right:1px solid #000; padding:0 16px;}
+div#footer div address span:nth-child(3){border-right:none;}
+div#footer div address span:nth-child(2)#bo{border-right:none;}
+div#footer div p#copy{text-transform:uppercase; font-size:13px;}
+
+div#footer div#family{float:right; width:175px; height:24px; border:1px solid #000; font-size:13px; line-height:24px;}
+div#footer div#family a{margin-left:7px;}
+div#footer h4 a{width:60px; height:60px; background:url(../images/off.png) no-repeat; position:fixed; right:200px; bottom:20px;}

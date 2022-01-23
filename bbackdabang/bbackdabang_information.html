@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>빽다방</title>
+    <link rel="stylesheet" href="./css/information.css"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="./js/main.js"></script>
+</head>
+ <body>
+	<!-- 헤더 -->
+	<header>
+		<h2 class="hidden">헤더영역</h2>
+		<div id="mein">
+		<h1><a href="./bbackdabang_main.html"><img src="./images/logo.png" alt="빽다방메인로고" style="width:194px; height:66px;" /></a></h1>
+		<div id="util">
+			<ul>
+				<li><a href="">더본코리아</a></li>
+				<li><a href="./bbackdabang_information.html">매장찾기</a></li>
+				<li><a href="">페이스북</a></li>
+				<li><a href="">인스타그램</a></li>
+			</ul>
+		</div>
+			<nav>
+				<ul id="first">
+					<li class="submenu"><a href="./paikceo.html">빽다방</a>
+						<ul>
+							<li><a href="./paikceo.html">CEO 인사말</a></li>
+							<li><a href="./paikhtmlsoge.html">빽다방 소개</a></li>
+							<li><a href="./paikhtmlcoffee.html">커피이야기</a></li>
+						</ul>
+					</li>
+					<li class="submenu"><a href="./bbackdabang.html">메뉴</a>
+						<ul>
+							<li><a href="./bbackdabang.html">신메뉴</a></li>
+							<li><a href="./index2.html">커피</a></li>
+							<li><a href="./paiksdrink.html">음료</a></li>
+							<li><a href="./paiksdessert.html">아이스크림/디저트</a></li>
+							<li><a href="./paiksccino.html">빽스치노</a></li>
+						</ul>
+					</li>
+					<li class="submenu"><a href="./paikhtml2.html">소식</a>
+						<ul>
+							<li><a href="./paikhtml2.html">소식</a></li>
+							<li><a href="./paikhtml2.html">이벤트</a></li>
+							<li><a href="./paikhtml2.html">친절 우수매장</a></li>
+						</ul>
+					</li>
+					<li class="submenu"><a href="./bbackdabang_community.html">커뮤니티</a>
+						<ul>
+							<li><a href="./bbackdabang_community.html">커피클래스</a></li>
+						</ul>
+					</li>
+					<li class="submenu"><a href="./bbackdabang_information.html">매장안내</a>
+						<ul>
+							<li><a href="./bbackdabang_information.html">매장찾기</a></li>
+						</ul>
+					</li>
+					<li class="submenu"><a href="./index3.html">창업안내</a>
+						<ul>
+							<li><a href="./index3.html">가맹정보 및 절차</a></li>
+						</ul>
+					</li>
+					<li class="submenu"><a href="">고객의 소리</a>
+                    </li>
+                </ul>
+            </nav>
+		</div>
+    <div id="headerfoot">
+    </div>
+	</header>
+	
+	<!-- 비주얼 -->
+	<article>
+		<h2 class="hidden">비주얼영역</h2>
+		<div id="visual">
+		<p>매장찾기</p>
+		<hr/>
+		<p>원하시는 지역의 매장을 검색해 보세요!</p>
+		</div>
+	</article>
+	
+	<!-- 컨텐츠 -->
+	<section>
+		<h2 class="hidden">컨텐츠영역</h2>
+			
+		<fieldset>
+			<div class="search">
+				<span>지역검색</span>
+				<form class="city">
+					<select>
+						<option>전체</option>
+						<option>서울특별시</option>
+						<option>경기도</option>
+						<option>인천광역시</option>
+						<option>대전광역시</option>
+						<option>충청북도</option>
+						<option>충청남도</option>
+						<option>강원도</option>
+						<option>경상북도</option>
+						<option>경상남도</option>
+						<option>제주도</option>
+						<option>울산광역시</option>
+						<option>부산광역시</option>
+						<option>광주광역시</option>
+						<option>전라북도</option>
+						<option>전라남도</option>
+						<option>대구광역시</option>
+						<option>세종특별자치시</option>
+					</select>
+				</form>
+				<form class="county">
+					<select>
+						<option>전체</option>
+						<option>강남구</option>
+						<option>강동구</option>
+						<option>강북구</option>
+						<option>강서구</option>
+						<option>관악구</option>
+						<option>광진구</option>
+						<option>구로구</option>
+						<option>금천구</option>
+						<option>노원구</option>
+						<option>도봉구</option>
+						<option>동대문구</option>
+						<option>동작구</option>
+						<option>마포구</option>
+						<option>서대문구</option>
+						<option>서초구</option>
+						<option>성동구</option>
+						<option>성북구</option>
+						<option>송파구</option>
+						<option>양천구</option>
+					</select>
+				</form>
+				<span class="store">매장명 검색</span>
+				<div class="store_search">
+					<form>
+						<input type="search"/>
+						<input type="image" src="./images_information/search-ico.png" alt="검색"/>
+					</form>
+				</div>
+			</div>
+		</fieldset>
+		<p>총 <span>916</span>개의 매장이 있습니다.</p>
+		<table>
+			<thead>
+				<tr>
+					<th>지역</th>
+					<th>매장명</th>
+					<th>주소</th>
+					<th>전화번호</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>서울특별시</td>
+					<td>돈암점</td>
+					<td>서울특별시 성북구 동선동4가 98-2</td>
+					<td>02-953-2351</td>
+					<td></td>
+				</tr>
+				<tr class="sub_table">
+					<td colspan="5">
+						<div>
+							<div><img src="./images_information/202101.jpg" alt="매장사진">
+							</div>
+							<div>
+								<ul>
+									<li><span>위치</span><span>서울특별시 성북구 동선동4가 98-2</span></li>
+									<li><span>영업시간</span><span>08:00 ~ 22:00</span></li>
+									<li><span>주차</span><span>불가</span></li>
+									<li><span>전화번호</span><span>02-953-2351</span></li>
+									<li><span>휴일</span><span>연중무휴</span></li>
+									<li><span>좌석</span><span>테이블14개 / 좌석28석</span></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>인천광역시</td>
+					<td>인천서운산업단지점</td>
+					<td>인천광역시 계양구 서운산단로 3길 4,sb타워 107호</td>
+					<td>032-555-9313</td>
+					<td></td>
+				</tr>
+				<tr class="sub_table">
+					<td colspan="5">
+						<div>
+							<div><img src="./images_information/202102.jpg" alt="매장사진">
+							</div>
+							<div>
+								<ul>
+									<li><span>위치</span><span>인천광역시 계약구 서운산단로 3길 4, sb타워 107호</span></li>
+									<li><span>영업시간</span><span>평일 07:30 ~ 20:00(아이스크림 마감 17:00)<br>
+									주말,공휴일 09:00 ~ 18:00(아이스크림 마감 17:00)</span></li>
+									<li><span>주차</span><span>건물 지하주차장</span></li>
+									<li><span>전화번호</span><span>032-555-9313</span></li>
+									<li><span>휴일</span><span>연중무휴</span></li>
+									<li><span>좌석</span><span>테이블7개 / 좌석14석</span></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>경기도</td>
+					<td>하남미사역점</td>
+					<td>경기도 하남시 미사강변동로 85(망월동1106), 힐스테이트 에코 미사 111호</td>
+					<td>031-796-2329</td>
+					<td></td>
+				</tr>
+				<tr class="sub_table">
+					<td colspan="5">
+						<div>
+							<div><img src="./images_information/202103.jpg" alt="매장사진">
+							</div>
+							<div>
+								<ul>
+									<li><span>위치</span><span>경기도 하남시 미사강변동로 85(망월동1106), 힐스테이트 에코미사 111호</span></li>
+									<li><span>영업시간</span><span>08:00 ~ 22:00</span></li>
+									<li><span>주차</span><span>건물 내 지하주차장</span></li>
+									<li><span>전화번호</span><span>031-796-2329</span></li>
+									<li><span>휴일</span><span>연중무휴</span></li>
+									<li><span>좌석</span><span>테이블8개 / 좌석11석</span></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>대전광역시</td>
+					<td>대전용운에코포레점</td>
+					<td>대전광역시 동구 용운동 297 1층</td>
+					<td>042-285-5552</td>
+					<td></td>
+				</tr>
+				<tr class="sub_table">
+					<td colspan="5">
+						<div>
+							<div><img src="./images_information/202104.jpg" alt="매장사진">
+							</div>
+							<div>
+								<ul>
+									<li><span>위치</span><span>대전광역시 동구 용운동 297 1층</span></li>
+									<li><span>영업시간</span><span>09:00 ~ 22:00</span></li>
+									<li><span>주차</span><span>가능</span></li>
+									<li><span>전화번호</span><span>042-285-5552</span></li>
+									<li><span>휴일</span><span>연중무휴</span></li>
+									<li><span>좌석</span><span>테이블10개 / 좌석22석</span></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>경기도</td>
+					<td>동탄영천K밸리점</td>
+					<td>경기도 화성시 동탄첨단산업1로 14, 동탄케이벨리 1층 112호</td>
+					<td>031-612-7161</td>
+					<td></td>
+				</tr>
+				<tr class="sub_table">
+					<td colspan="5">
+						<div>
+							<div><img src="./images_information/202105.jpg" alt="매장사진">
+							</div>
+							<div>
+								<ul>
+									<li><span>위치</span><span>경기도 화성시 동탄첨단산업1로 14, 동탄케이벨리 1층 112호</span></li>
+									<li><span>영업시간</span><span>평일 07:00 ~ 22:00<br>주말 09:00 ~ 18:00</span></li>
+									<li><span>주차</span><span>지하 주차장 이용 가능</span></li>
+									<li><span>전화번호</span><span>031-612-7161</span></li>
+									<li><span>휴일</span><span>연중무휴</span></li>
+									<li><span>좌석</span><span>테이블7개 / 좌석14석</span></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>충청북도</td>
+					<td>충북혁신도시진천점</td>
+					<td>충청북도 진천군 덕산읍 시가로 14</td>
+					<td>043-535-8672</td>
+					<td></td>
+				</tr>
+				<tr class="sub_table">
+					<td colspan="5">
+						<div>
+							<div><img src="./images_information/202106.jpg" alt="매장사진">
+							</div>
+							<div>
+								<ul>
+									<li><span>위치</span><span>충청북도 진천군 덕산읍 시가로 14</span></li>
+									<li><span>영업시간</span><span>평일 08:00 ~ 21:30<br>주말,공휴일 09:00 ~ 21:30</span></li>
+									<li><span>주차</span><span>불가</span></li>
+									<li><span>전화번호</span><span>043-535-8672</span></li>
+									<li><span>휴일</span><span>연중무휴</span></li>
+									<li><span>좌석</span><span>테이블15개 / 좌석36석</span></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>충청북도</td>
+					<td>청주테크노폴리스점</td>
+					<td>충청북도 청주시 흥덕구 송화로184번길 4, 102호</td>
+					<td>043-260-2389</td>
+					<td></td>
+				</tr>
+				<tr class="sub_table">
+					<td colspan="5">
+						<div>
+							<div><img src="./images_information/202106.jpg" alt="매장사진">
+							</div>
+							<div>
+								<ul>
+									<li><span>위치</span><span>충청북도 청주시 흥덕구 송화로184번길 4,102호</span></li>
+									<li><span>영업시간</span><span>평일 08:00 ~ 22:00</span></li>
+									<li><span>주차</span><span>불가</span></li>
+									<li><span>전화번호</span><span>043-260-2389</span></li>
+									<li><span>휴일</span><span>연중무휴</span></li>
+									<li><span>좌석</span><span>테이블13개 / 좌석27석</span></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>서울특별시</td>
+					<td>강남역CGV점</td>
+					<td>서울특별시 강남구 테헤란로1길 48</td>
+					<td>02-566-5353</td>
+					<td></td>
+				</tr>
+				<tr class="sub_table">
+					<td colspan="5">
+						<div>
+							<div><img src="./images_information/202107.jpg" alt="매장사진">
+							</div>
+							<div>
+								<ul>
+									<li><span>위치</span><span>서울특별시 강ㅇ남구 테헤란로1길-48</span></li>
+									<li><span>영업시간</span><span>07:00 ~ 22:00</span></li>
+									<li><span>주차</span><span>불가</span></li>
+									<li><span>전화번호</span><span>02-566-5353</span></li>
+									<li><span>휴일</span><span>연중무휴</span></li>
+									<li><span>좌석</span><span>테이블2개 / 좌석4석</span></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>경기도</td>
+					<td>별내파라곤스퀘어점</td>
+					<td>경기도 남양주시 별내동 975-4 별내파라곤스퀘어 1층 C112호</td>
+					<td>031-931-1443</td>
+					<td></td>
+				</tr>
+				<tr class="sub_table">
+					<td colspan="5">
+						<div>
+							<div><img src="./images_information/202108.jpg" alt="매장사진">
+							</div>
+							<div>
+								<ul>
+									<li><span>위치</span><span>경기도 남양주시 별내동 975-4 별내파라곤스퀘어 1층 C112호</span></li>
+									<li><span>영업시간</span><span>월~금요일 08:00 ~ 20:00<br>토요일 09:00 ~ 20:00</span></li>
+									<li><span>주차</span><span>지하주차장 이용 가능</span></li>
+									<li><span>전화번호</span><span>031-931-1443</span></li>
+									<li><span>휴일</span><span>매주 일요일</span></li>
+									<li><span>좌석</span><span>테이블3개 / 좌석7석</span></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>경상북도</td>
+					<td>경북고령중앙점</td>
+					<td>경상북도 고령군 대가야읍 중앙로 13-1 (구. 헌무누리 234번지)</td>
+					<td>054-906-9828</td>
+					<td></td>
+				</tr>
+				<tr class="sub_table">
+					<td colspan="5">
+						<div>
+							<div><img src="./images_information/202109.jpg" alt="매장사진">
+							</div>
+							<div>
+								<ul>
+									<li><span>위치</span><span>경상북도 고령군 대가야읍 중앙로 13-1 (구.헌문리234번지)</span></li>
+									<li><span>영업시간</span><span>10:00 ~ 20:00</span></li>
+									<li><span>주차</span><span>불가</span></li>
+									<li><span>전화번호</span><span>054-906-9828</span></li>
+									<li><span>휴일</span><span>연중무휴</span></li>
+									<li><span>좌석</span><span>Take-Out 전용</span></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="number">
+			<ul>
+				<li><a href="" class="on">1</a></li>
+				<li><a href="">2</a></li>
+				<li><a href="">3</a></li>
+				<li><a href="">4</a></li>
+				<li><a href="">5</a></li>
+				<li><a href=""><img src="./images_information/board_arr.png" alt="다음페이지"></a></li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- 푸터 -->
+	<div id="footer">
+		<h2 class="hidden">푸터영역</h2>
+		<div>
+			<div id="family"><a href="">패밀리사이트 바로가기</a></div>
+			<h3><a href="">푸터로고</a></h3>
+			<div id="address">
+				<address>
+					<p><span>(주)더본코리아</span><span>사업자등록번호 211-86-00870</span><span>대표이사 백종원</span></p>
+					<p><span>주소:서울시 강남구 봉은사로1길39 유성빌딩5~6층</span><span id="bo">팩스:02-511-3864</span></p>
+					<p><span>본사 대표전화:02-549-3864</span><span>가맹상담전화:02-3447-0410</span><span>고객센터:1544-2360</span></p>
+				</address>
+				<p id="copy">copyright&copy; 2018 theborn korea inc.all rights reserved</p>
+			</div>
+		</div>
+		<h4><a href=""></a></h4>
+	</div>
+  
+ </body>
+</html>

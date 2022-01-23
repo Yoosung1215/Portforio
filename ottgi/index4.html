@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <title>오뚜기 자주묻는질문페이지</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/index4.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+    </style>
+  </head>
+  <script>
+    $(function(){
+      //header start
+      var subdrop = $('.submenu > li > a');
+      var subdropmenu = $('.submenu > li > a').next();
+      subdrop.click(function(){
+        if($(this).next().css('display')=='none'){
+          subdropmenu.fadeOut('fast');
+          $(this).next().fadeIn('fast');
+        }else{
+          subdropmenu.fadeOut('fast');
+        }
+        return false;
+      });
+      $('.submenu3 > li > a').click(function(){
+        if($(this).next().css('display')=='none'){
+          $('.submenu3 > li > a').next().fadeOut('fast');
+          $(this).next().fadeIn('fast');
+        }else{
+          $('.submenu3 > li > a').next().fadeOut('fast');
+        }
+        
+      });
+      $('.drops1 a').click(function(){
+        if($('.n1').css('display')=='none'){
+          $('.navdrop').fadeOut('fast');
+          $('.n1').slideDown();
+        }else{
+          $('.navdrop').fadeOut('fast');
+        }
+        return false;;
+      });
+
+      $('.drops2 a').click(function(){
+        if($('.n2').css('display')=='none'){
+          $('.navdrop').fadeOut('fast');
+          $('.n2').slideDown();
+        }else{
+          $('.navdrop').fadeOut('fast');
+        }
+        return false;;
+      });
+      $('.drops3 a').click(function(){
+        if($('.n3').css('display')=='none'){
+          $('.navdrop').fadeOut('fast');
+          $('.n3').slideDown();
+        }else{
+          $('.navdrop').fadeOut('fast');
+        }
+        
+      });
+      $('.openmenu').click(function(){
+        $('span > i').removeClass('fa-minus').addClass('fa-plus');
+        $('.hmsubbg').slideUp('slow');
+        $('.hmmenu').slideToggle('slow');
+      });
+      $('.hmmenu > li').not($('.hmmenu > li').slice(1,3)).click(function(){
+        $(this).find('span > i').toggleClass('fa-plus fa-minus');
+        $(this).find('.hmsubbg').slideToggle('slow');
+      });
+      //header end
+
+      // section start
+      $('.rb > ul > li').on('click',function(){
+        $(this).find('.drop').slideToggle();
+      });
+      $('.btn ul li').on('click',function(){
+        var tg = $(this);
+        $('.btn ul li').removeClass('on');
+        tg.addClass('on')
+        return false;
+      });
+      $('.meinsec ul li dl dt').on('click', function(){
+        $(this).next().slideToggle();
+      });
+      // section end
+      /*$('.btn ul li').on({
+			mouseover:function(event){
+				var tg = $(this);
+				$('.btn ul li').removeClass('on');
+				tg.addClass('on');
+			},
+			mouseout:function(){
+				var tg = $(this);
+				tg.removeClass('on');
+				// onActive();
+			}
+		  });*/
+    });
+  </script>
+<body>
+  <!-- header start -->
+  <div class="header">
+    <h1 class="meinlogo">
+      <a href="./index.html"><img src="./img/logo.png" alt=""></a>
+      <div class="snsnav">
+        <a href="#"></a>
+        <a href="#"></a>
+      </div>
+    </h1>
+    <div class="nav">
+      <ul>
+        <li class="drops1">
+          <a href="#">회사소개</a>
+        </li>
+          <li><a href="./index2.html">제품정보</a></li>
+          <li><a href="http://ottogi.okitchen.co.kr/main/main.asp" target="_blank">O'kitchen</a></li>
+          <li class="drops2"><a href="">홍보센터</a></li>
+          <li class="drops3"><a href="">고객서비스</a></li>
+          <li><a href="http://www.ottogimall.co.kr" target="_blank">오뚜기몰</a></li>
+      </ul>
+    </div>
+    <div class="navdrop n1">
+      <div>
+        <div class="navdroptext">
+          <h2>
+            <span>회사소개</span>
+            <span class="en">About</span>
+          </h2>
+          <p>365일 웃음 가득, 행복 가득.언제나 고객과<br>함께 합니다.고객이 웃을 때 오뚜기는 행복합니다.</p>
+        </div>
+        <ul class="submenu">
+          <li>
+            <a href="#">(주)오뚜기 ></a>
+            <ul class="subdrop">
+              <li><a href="./index1.html">회사 소개</a></li>
+              <li><a href="#">기업 이념</a></li>
+              <li><a href="#">오뚜기 CI</a></li>
+              <li><a href="#">창업주 풍림 한태호 생애</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">지속가능경영 ></a>
+            <ul class="subdrop">
+              <li><a href="#">사회공헌</a></li>
+              <li><a href="#">환경경영</a></li>
+              <li><a href="#">윤리경영</a></li>
+              <li><a href="#">지배구조</a></li>
+              <li><a href="#">지속가능경영 보고서</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">인재 채용 ></a>
+            <ul class="subdrop">
+              <li><a href="#">인사제도</a></li>
+              <li><a href="#">직무소개</a></li>
+              <li><a href="#">공고 및 입사지원</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">사업장 소개 ></a>
+            <ul class="subdrop">
+              <li><a href="#">국내사업장</a></li>
+              <li><a href="#">해외사업장</a></li>
+              <li><a href="#">중앙연구소</a></li>
+            </ul>
+          </li>
+          <li><a href="#">찾아오시는 길</a></li>
+        </ul>
+        <div class="line"></div>
+        <div class="now">
+          <a href="#">온라인입사지원</a>
+          <a href="#">환경경영 바로가기</a>
+          <a href="#">공장견학신청하기</a> 
+        </div>
+      </div>
+    </div>
+    <div class="navdrop n2">
+      <div>
+        <div class="navdroptext">
+          <h2>
+            <span>홍보센터</span>
+            <span class="en">PR Center</span>
+          </h2>
+          <p>광고로 보는 오뚜기의 역사.<br>TV CF, 지면광고를 통해 오뚜기의 변천사를 <br>보실 수 있습니다.</p>
+        </div>
+        <ul class="submenu">
+          <li>
+            <a href="#">오뚜기 뉴스 ></a>
+            <ul class="subdrop sd2">
+              <li><a href="./index3.html">보도자료</a></li>
+              <li><a href="#">오뚜기소식</a></li>
+              <li><a href="#">코로나19 대응</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">오뚜기 광고 ></a>
+            <ul class="subdrop sd2">
+              <li><a href="#">TV 광고</a></li>
+              <li><a href="#">지면광고</a></li>
+            </ul>
+          </li>
+          <li><a href="#">즐거운 오뚜기</a></li>
+          <li><a href="#">카레 및 향신료 국제 심포지엄</a></li>
+          <li>
+            <a href="#">투자정보 ></a>
+            <ul class="subdrop sd2">
+              <li><a href="#">재무정보</a></li>
+              <li><a href="#">공시정보</a></li>
+            </ul>
+          </li>
+          <li><a href="#">오뚜기 창립 50주년</a></li>
+        </ul>
+        <div class="line"></div>
+        <div class="now">
+          <a href="#">카탈로그 보기</a>
+          <a href="#">투자정보 다운로드</a>
+          <a href="#">제품별 TV CF 보기</a> 
+        </div>
+      </div>
+    </div>
+    <div class="navdrop n3">
+      <div>
+        <div class="navdroptext">
+          <h2>
+            <span>고객서비스</span>
+            <span class="en">Customer</span>
+          </h2>
+          <p>오뚜기는 고객님의 작은 소리에도 귀기울여 듣습니다.<br>오뚜기에 대한 불편하신 사항이나, 문의사항, 제품관련<br>문의사항을 남겨주세요.</p>
+        </div>
+        <ul class="submenu3">
+          <li>
+            <a href="./index4.html">자주 묻는 질문</a>
+          </li>
+          <li>
+            <a href="#">고객 한마디</a>
+          </li>
+          <li>
+            <a href="#">공장 견학 ></a>
+            <ul class="subdrop sd2">
+              <li><a href="#">공장 소개</a></li>
+              <li><a href="#">공장견학 신청</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="line"></div>
+        <div class="now">
+          <a href="#">공장견학 신청</a>
+          <a href="#">견학 공장 위치</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- header end -->
+
+  <!-- headermobile start -->
+  <div class="hmobile">
+    <div class="hmobilewrap">
+      <a href="#" class="openmenu"><img src="./img/icon_all.png" alt="" ></a>
+      <h1 class="headerlogomobile">
+        <a href="./index.html"><img src="./img/logo.png" alt="" style="width: 65px; height: 65px;"></a>
+      </h1>
+      <div class="snsnav">
+        <a href=""></a>
+        <a href=""></a>
+      </div>
+    </div>
+    <ul class="hmmenu">
+      <li>
+        <a href="#">회사소개<span><i class="fas fa-plus"></i></span></a>
+        <div class="hmsubbg">
+          <ul class="hmsub">
+            <li><a href="#">오뚜기 뉴스</a></li>
+            <li><a href="./index3.html">- 보도 자료</a></li>
+            <li><a href="#">- 오뚜기소식</a></li>
+            <li><a href="#">- 코로나19 대응</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">오뚜기광고</a></li>
+            <li><a href="#">- TV광고</a></li>
+            <li><a href="#">- 지면광고</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">즐거운 오뚜기</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">카레 및 향신료 국제 심포지엄</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">투자정보</a></li>
+            <li><a href="#">- 재무정보</a></li>
+            <li><a href="#">- 공시정보</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">오뚜기 창립 50주년</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="./index2.html">제품 정보<span><i class="fas fa-plus"></i></span></a>
+      </li>
+      <li>
+        <a href="http://ottogi.okitchen.co.kr/main/main.asp" target="_blank">O'kitchen<span><i class="fas fa-plus"></i></span></a>
+      </li>
+      <li>
+        <a href="#">홍보 센터<span><i class="fas fa-plus"></i></span></a>
+        <div class="hmsubbg">
+          <ul class="hmsub">
+            <li><a href="#">오뚜기 뉴스</a></li>
+            <li><a href="./index3">- 보도 자료</a></li>
+            <li><a href="#">- 오뚜기소식</a></li>
+            <li><a href="#">- 코로나19 대응</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">오뚜기광고</a></li>
+            <li><a href="#">- TV광고</a></li>
+            <li><a href="#">- 지면광고</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">즐거운 오뚜기</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">카레 및 향신료 국제 심포지엄</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">투자정보</a></li>
+            <li><a href="#">- 재무정보</a></li>
+            <li><a href="#">- 공시정보</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">오뚜기 창립 50주년</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">고객 서비스<span><i class="fas fa-plus"></i></span></a>
+        <div class="hmsubbg">
+          <ul class="hmsub">
+            <li><a href="./index4.html">자주 묻는 질문</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">고객 한마디</a></li>
+          </ul>
+          <ul class="hmsub">
+            <li><a href="#">공장 견학</a></li>
+            <li><a href="#">- 공장소개</a></li>
+            <li><a href="#">- 공장견학 신청</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+    <article>
+      <div class="bg">
+        <div class="artte">
+          <p>고객서비스</p>
+          <div></div>
+          <h2>자주 묻는 질문</h2>
+          <p>궁금하신 질문의 답변을 알려드립니다.</p>
+        </div>
+      </div>
+    </article>
+    <div class="rb" id="myNavbar">
+      <ul>
+        <a href="#"><i class="fas fa-home"></i></a>
+        <li>
+          <a href="#">회사소개</a>
+          <ul class="drop">
+              <li><a href="#">회사 소개</a></li>
+              <li><a href="#">제품정보</a></li>
+              <li><a href="#">쿠킹&amp;스토리</a></li>
+              <li><a href="#">홍보센터</a></li>
+              <li><a href="#">고객서비스</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">(주)오뚜기</a>
+          <ul class="drop">
+              <li><a href="#">(주)오뚜기</a></li>
+              <li><a href="#">지속가능경영</a></li>
+              <li><a href="#">인재 채용</a></li>
+              <li><a href="#">사업장 소개</a></li>
+              <li><a href="#">찾아오시는 길</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <section>
+      <div class="btn">
+        <ul>
+          <li class="on"><a href="#">제품</a></li>
+          <li><a href="#">기업</a></li>
+          <li><a href="#">기타</a></li>
+        </ul>
+      </div>
+        <div class="meinsec">
+          <div>
+            <ul class="meintext">
+                <li>
+                  <dl>
+                    <dt>3분 카레는 우리나라 최초의 레토르트 식품인가요?</dt>
+                    <dd>레토르트 식품은 조리된 식품을 공기와 빛이 들어오지 않도록 만들어진 용기에 담아 균이 없는 상태를 유지해서 오랜 시간 보관이 가능하도록 만든 간편식입니다. 우리나라에서는 1977년 농어촌개발공사 식품연구소에서 처음으로 레토르트 파우치 연구를 했고, 그 뒤에 국방과학연구소가 전투식량으로 개발한 역사가 있는데, 일반 소비자를 위한 제품은 1981년 4월, 오뚜기가 생산한 ‘3분카레’가 최초입니다.</dd>
+                  </dl>
+                </li>
+                <li>
+                    <dl>
+                      <dt>3분 쇠고기카레(짜장)와 3분 카레(짜장)의 차이점이 무엇인가요?</dt>
+                      <dd>3분 쇠고기 카레와 3분 쇠고기 짜장의 경우, 쇠고기 육수 원료 등을 사용하여 쇠고기의 특징적인 맛을 살린 제품이며, 3분 카레와 3분 짜장은 카레∙짜장 본래의 맛이 잘 느껴질 수 있도록 카레는 향신료의 맛, 짜장은 춘장의 맛에 각각 집중한 제품입니다.</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                      <dt>3분류 제품들을 조리하지 않고 먹어도 되나요?</dt>
+                      <dd>
+                        네, 가능합니다. 3분류 제품들을 포함한 레토르트 제품은 밀봉한 식품을 고온고압에서 미생물을 멸균한 완전 조리된 식품입니다. 따라서 조리되지 않은 상태로 취식하여도 안전상 문제는 없습니다. 다만, 오뚜기가 제시한 조리방법은 제품을 가장 맛있게 취식할 수 있는 방법이므로 가능하면 데워 드시는 것을 권장 드립니다.
+                      </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                      <dt>뿌셔뿌셔는 라면인가요 과자인가요?</dt>
+                      <dd>뿌셔뿌셔는 스낵으로 나온 제품이라 물에 끓일 경우 라면과 달리 면발이 유지가 되지 않습니다. 그렇기 때문에 ‘라면’ 보다는 라면의 모양을 한 ‘과자’에 가깝습니다.</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                      <dt>마요네스 뚜껑 부분에는 왜 케챂과 달리 은박포장이 없나요?</dt>
+                      <dd>오뚜기 마요네스류는 케챂과 제조공정이 달라 케챂에 은박포장이 필요한 것과는 달리 마요네스는 은박포장이 필요하지 않습니다. 밀봉력이 우수한 스크루 캡과 별모양 내전, 비닐외포와 차단 효과가 우수한 다층튜브를 사용하여 산소차단성을 높이며, 국내 최초로 천연항산화제를 사용하고 진공배합을 통해 품질변화를 최소화하였습니다.</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                      <dt>마요네스에 기름층이 생겼어요.</dt>
+                      <dd>마요네스는 계란의 천연성분에 의해 기름과 다른 원료들이 유화된 제품으로, 0℃ 이하에 보관하거나 고온에 장시간 방치하면 기름층이 분리될 수 있습니다. 한번 분리된 마요네스는 다시 원래의 상태로 되돌릴 수 없으므로 0℃ 이하에서 얼지 않도록 주의하시고 개봉 전에는 직사광선이 없는 서늘한 곳, 개봉 이후에는 냉장고 문 쪽 칸에 보관하시기 바랍니다.</dd>
+                    </dl>
+                </li>
+            </ul>
+            <ul class="numbtn">
+              <li class="prev"><a href=""></a></li>
+              <li><a href="">1</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">3</a></li>
+              <li><a href="">4</a></li>
+              <li><a href="">5</a></li>
+              <li class="next"><a href=""></a></li>
+            </ul>
+          </div>
+        </div>
+    </section>
+    <div class="footer">
+      <div class="footernavwrap">
+        <div>
+          <ul class="footernav">
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">고객상담</a></li>
+            <li><a href="#">찾아오시는 길</a></li>
+            <li><a href="#">오뚜기몰</a></li>
+          </ul>
+          <ul class="footersns">
+            <li><a href="#"><img src="./img/insta_icon.png" alt=""></a></li>
+            <li><a href="#"><img src="./img/blog_icon.png" alt=""></a></li>
+            <li><a href="#"><img src="./img/btn_ff.png" alt=""></a></li>
+            <li><a href="#"><img src="./img/btn_yt.png" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footeraddresswrap">
+        <div class="address">
+          <img src="./img/f_logo.jpg" alt="" style="width: 161px; height: 56px;">
+          <div class="foottext">
+            <ul>
+              <li>(주)오뚜기</li>
+              <li>사업자등록번호 : 138-81-03238</li>
+              <li>대표이사 황성만</li>
+              <li>주소 (14060) 경기도 안양시 동안구 흥안대로 405 (평촌동 160)</li>
+              <li>오뚜기 고객상담실 : 080-024-2311</li>
+              <li>오뚜기라면 고객상담실 : 080-088-1212 (월~금 08:30~17:00)</li>
+            </ul>
+            <p>Copyright ⓒ OTTOGI CORPORATION.,Ltd All Rights Reserved.</p>
+          </div>
+          <img src="./img/2014_WA_mark2.gif" alt="" style="width: 300px; height: 59px;">
+        </div>
+      </div>
+    </div>
+</body>
+</html>

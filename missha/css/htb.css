@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+/* �ʱ�ȭ */
+body,header,article,section,footer,h1,h2,div,p,span,ul,li,dl,dt,dd,hr{margin:0; padding:0;}
+.hidden{display:none;}
+ul,li{list-style:none;}
+a{text-decoration:none; color:#000;}
+hr{border:none;}
+
+/* ������� */
+header{width:1300px; height:135px; margin:0 auto; text-transform:uppercase; }
+header div.titleArea{padding:21px 0;width:1300px; height:30px; text-align:center; background-color:#fff;}
+header div.titleArea div.menu{float:left; width:121px; height:30px; margin-right:464px; text-indent:-9999px; }
+header div.titleArea div.menu li{float:left; margin-right:23px; width:25px; height:30px; background-repeat:no-repeat; background-position:center;}
+header div.titleArea div.menu li:nth-child(1) span{display:block; height:2px; background-color:#000; margin:0 0 10px 0;}
+header div.titleArea div.menu li:nth-child(1) span:nth-child(1){margin-top:3px;}
+header div.titleArea div.menu li:nth-child(2){background:url(../missa/images/icon_location.png) center no-repeat;}
+header div.titleArea div.menu li:last-child{margin-right:0; background:url(../missa/images/icon_search.png) center no-repeat;}
+
+header div.titleArea h1{float:left; width:142px; background-color:pink; text-indent:-9999px; background:url(../missa/images/logo.png) no-repeat;}
+header div.titleArea div.lang{width:120px; height:30px; background-color:#fff;float:right;}
+header div.titleArea  div.lang li{width:60px; height:30px; float:left; text-align:center; line-height:30px; box-sizing:border-box;}
+header div.titleArea  div.lang li.on{border-radius:15px; border:1px solid #ccc;}
+header div.titleArea  div.lang li.on a{color:#000; font-weight:bold;}
+header div.titleArea  div.lang li a{color:#ccc;}
+
+/* nav */
+header nav{height:60px; background-color:#fff; line-height:60px;}
+header nav li{float:left; padding:0 56px;}
+header nav li a.on{font-weight:bold; border-bottom:2px solid #000; padding-bottom:18px;}
+header nav li:hover a{font-weight:bold; border-bottom:2px solid #000; padding-bottom:18px;}
+
+/* hr */
+header + hr{height:1px; background-color:#eee; margin-bottom:80px;}
+div.titleArea + hr{height:1px; background-color:#eee;}
+
+div#contents{width:1300px; margin:0 auto;}
+/* ���־󿵿� */
+article{height:400px; background-color:orange; background:url(../missa/images/meinlogo.jpg) no-repeat top center; background-size:cover; margin-bottom:64px;}
+
+/* ���������� */
+section{overflow:hidden;}
+section div.filter{height:90px; background-color:#eee; margin-bottom:80px; padding:30px 60px 30px 0; box-sizing:border-box;}
+section div.filter > div{line-height:30px; font-size:16px; width:160px; height:30px;float:right; cursor:pointer;}
+section div.filter > div > span{display:block; width:100px; height:30px; float:left; text-align:right; background:url(../missa/images/icon_filter.png) no-repeat left center;}
+section div.filter > div > p{width:50px; height:30px; float:right; background:#b4b4b4; border-radius:15px; text-indent:-9999px;}
+section div.filter > div > p > span{ display:block; width:24px; height:24px; background:#fff; border-radius:100%; margin:3px;}
+section div.product{margin-bottom:120px; overflow:hidden;}
+section div.product li{width:25%; height:330px; margin-bottom:120px; float:left; box-sizing:border-box;}
+section div.product li:hover{border:2px solid #000; box-sizing:border-box;}
+section div.product li dt{text-indent:-9999px; width:350px; height:379px; background-repeat:no-repeat; background-position:top center; background-size:70%;}
+section div.product li dd{width:80%; line-height:20px; font-size:12px; text-align:center; margin:0 auto;}
+section div.product li:nth-child(1) dt{background-image:url(../missa/images/20210716095158717f81f8-be2e-4258-8a55-9eba072b1afb.jpg);}
+section div.product li:nth-child(2) dt{background-image:url(../missa/images/2021050207483502ea4b70-9beb-46d3-9646-129a252e2e71.jpg);}
+section div.product li:nth-child(3) dt{background-image:url(../missa/images/BO00105476_84795454.jpg);}
+section div.product li:nth-child(4) dt{background-image:url(../missa/images/BO00105463_37591022.jpg);}
+section div.product li:nth-child(5) dt{background-image:url(../missa/images/BO00105457_00612921.jpg);}
+section div.product li:nth-child(6) dt{background-image:url(../missa/images/BO00105450_43028842.jpg);}
+section div.product li:nth-child(7) dt{background-image:url(../missa/images/BO00076645_87994805.jpg);}
+section div.product li:nth-child(8) dt{background-image:url(../missa/images/BO00081578_87351866.jpg);}
+section div.product li:nth-child(9) dt{background-image:url(../missa/images/BO00081577_01433929.jpg);}
+section div.product li:nth-child(10) dt{background-image:url(../missa/images/BO00081575_27793076.jpg);}
+section div.product li:nth-child(11) dt{background-image:url(../missa/images/BO00081574_85293616.jpg);}
+section div.product li:nth-child(12) dt{background-image:url(../missa/images/BO00081573_25537604.jpg);}
+section div.product li:nth-child(13) dt{background-image:url(../missa/images/BO00081572_04114796.jpg);}
+section div.product li:nth-child(14) dt{background-image:url(../missa/images/BO00081571_62774999.jpg);}
+section div.product li:nth-child(15) dt{background-image:url(../missa/images/BO00081570_67133785.jpg);}
+section div.product li:nth-child(16) dt{background-image:url(../missa/images/BO00081569_73814312.jpg);}
+section div.product li:nth-child(17) dt{background-image:url(../missa/images/BO00078836_68566244.jpg);}
+section div.product li:nth-child(18) dt{background-image:url(../missa/images/BO00076642_23957498.jpg);}
+section div.product li:nth-child(19) dt{background-image:url(../missa/images/BO00076635_19012289.jpg);}
+section div.product li:nth-child(20) dt{background-image:url(../missa/images/BO00076631_33267225.jpg);}
+
+
+
+
+section div.paging{width:396px; height:44px; margin:0 auto; }
+section div.paging li{width:46px; height:46px; float:left; margin-right:10px; background:#fff; background-repeat:no-repeat; background-position:center;  line-height:46px;  text-align:center;}
+section div.paging li a.on{border-bottom:2px solid #000;}
+
+section div.paging li:nth-child(1){background-image:url(../missa/images/btn_first.png); text-indent:-9999px; line-height:46px;}
+section div.paging li:nth-child(2){background-image:url(../missa/images/btn_prev.png); text-indent:-9999px;}
+section div.paging li:nth-child(6){background-image:url(../missa/images/btn_next.png); text-indent:-9999px;}
+section div.paging li:nth-child(7){background-image:url(../missa/images/btn_last.png); text-indent:-9999px;}
+/* Ǫ�Ϳ��� */
+div#footerArea{height:410px; background-color:#000; font-size:14px;}
+div#footerArea footer{position:relative; top:100px; width:1300px; height:210px; margin:100px auto; background-color:#000;}
+div#footerArea h1{width:158px; height:41px; float:left; margin-right:70px; background:url(../missa/images/footer_logo.png) no-repeat; text-indent:-9999px;}
+div#footerArea div.adressArea{float:left; background-color:#000; line-height:24px;}
+
+div#footerArea div.adressArea a{background-color:#000; font-size:16px; font-weight:bold; color:gray;}
+div#footerArea div.adressArea p:nth-child(1){margin-bottom:60px;}
+div#footerArea div.adressArea p:nth-child(1) a{padding-right:45px; font-weight:bold;}
+div#footerArea div.adressArea p:nth-child(1) a:hover{color:#fff;}
+div#footerArea div.adressArea address{font-style:normal; color:#fff; font-weight:bold; margin-bottom:30px;}
+div#footerArea div.adressArea address p span{display:block; padding:0 20px 0 0; float:left;}
+div#footerArea div.adressArea address p span:nth-child(1):after{content:""; display:inline-block; width:1px; height:10px; background-color:#fff; margin-left:20px;}
+div#footerArea div.adressArea p small{float:left; margin:24px 0 0; background-color:#000; color:#fff;}
+div#footerArea div.social{float:right; width:245px; height:210px; background-color:#000;}
+div#footerArea div.social ul{height:32px; margin-bottom:110px; background-color:#000;}
+div#footerArea div.social ul li{width:34px; height:32px; float:left; margin-right:25px; background-repeat:no-repeat; background-position:right center; text-indent:-9999px;}
+div#footerArea div.social ul li:nth-child(1){background-image:url(../missa/images/icon_youtube.png);}
+div#footerArea div.social ul li:nth-child(2){background-image:url(../missa/images/icon_instargram.png);}
+div#footerArea div.social ul li:last-child{margin-right:0; background-image:url(../missa/images/icon_facebook.png);}
+
+div#footerArea div.social div.familySite{height:46px; border:1px solid #7a7a7a; line-height:46px; text-indent:24px; background:url(../missa/images/arrow_family_site.png) no-repeat right center;}

@@ -1,0 +1,55 @@
+@charset "utf-8";
+body,header,article,section,footer,div,h1,h2,h3,h4,ul,li,p,hr{margin:0; padding:0;}
+.hidden{display:none;}
+ul,li{list-style:none;}
+a{text-decoration:none; color:#000;}
+hr{border:none;}
+
+/* 헤더영역 */
+header{width:100%; height:123px; background-color:#fff; padding-top:20px; position:fixed; z-index: 999; top:0;}
+div#yellow{display: none; width: 100%; height: 177px; background-color: aqua;}
+
+/* util */
+header div#mein{width:1150px; height:103px; background-color:#fff; margin:0 auto;}
+header div#mein h1{width:194px; height:66px; float:left; margin-top:16px; margin-left:-7px;}
+header div#mein div#util{float:right; width:232px; height:20px; font-size:11px; margin-top:7px; margin-right:10px;}
+header div#mein div#util ul li{float:left; line-height:20px; }
+header div#mein div#util ul li a{color:gray;}
+header div#mein div#util ul li:nth-child(1)::after{content:""; display:block; width:1px; height:10px; background:gray; float:right; margin-left:13px; margin-right:19px; margin-top:5px;}
+header div#mein div#util ul li:nth-child(2)::after{content:""; display:block; width:1px; height:10px; background:gray; float:right; margin-left:15px; margin-right:21px; margin-top:5px;}
+header div#mein div#util ul li:nth-child(3){width:20px; height:20px; background:url(../images/facebook-ico.png) no-repeat; background-size:cover; text-indent:-9999px; margin-right:22px;}
+header div#mein div#util ul li:nth-child(4){width:20px; height:20px; background:url(../images/insta-ico.png) no-repeat; background-size:cover; text-indent:-9999px;}
+
+/* nav */
+header div#mein nav{width:826px; height:183px; float:right; margin-top: 38px; margin-right: 8px;}
+header div#mein nav ul#first > li{float:left; font-size: 13px; font-weight: bold; }
+header div#mein nav ul#first li ul{padding-top: 18px; margin-top:21px; font-weight:normal;}
+header div#mein nav ul#first li ul li{margin-bottom: 8px; font-size: 14px;}
+header div#mein nav ul#first li ul li:hover{font-weight: bold; font-size: 14px;}
+header div#mein nav ul#first li:nth-child(1){width:124px;}
+header div#mein nav ul#first li:nth-child(2){width:109px;}
+header div#mein nav ul#first li:nth-child(3){width:110px;}
+header div#mein nav ul#first li:nth-child(4){width:138px;}
+header div#mein nav ul#first li:nth-child(5){width:137px;}
+header div#mein nav ul#first li:nth-child(6){width:137px;}
+header div#mein nav ul#first li:nth-child(7){width:71px;}
+header div#mein nav ul#first  li ul{width:72px;}
+header div#mein nav ul#first li:hover ul{background:url(../images/menu-arr.png) no-repeat;}
+header div#mein nav ul#first > li > ul:nth-child(5){background:url(../images/menu-arr.png) no-repeat center top;}
+div#headerfoot{width: 100%; height:157px; background: url(../images/menu-bg.jpg);}
+
+/*article*/
+article{height:500px; margin-top:123px; margin-bottom:90px; background:url(../images_community/bgclass.jpg) no-repeat center; background-size:cover;}
+article > div#visual{width:511px; height:132px; margin:auto; padding-top:150px;}
+article > div#visual p{text-align:center;}
+article > div#visual p:nth-child(1){font-size:42px;}
+article > div#visual p:nth-child(3){font-size:18px;}
+article > div#visual hr{width:40px; height:2px; background:#000; margin:35px auto 35px;}
+
+article div#menu1{width:170px; height:38px; margin:138px auto; background:#fff; text-align:center; line-height:38px; border:1px solid #ccc; box-sizing:border-box;}
+article div#menu1{background:#ffe600; font-weight:bold;}
+
+/* 컨텐츠 */
+section{width:1150px; height:2108px; margin:0 auto 97px;}
+section div{width:980px; height:2108px; margin:0 auto; background:url(../images_community/bg201911.jpg) no-repeat center;}
+

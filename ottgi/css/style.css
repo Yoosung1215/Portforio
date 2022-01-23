@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+article {position: relative;}
+.navbar-brand > img{width: auto; height: 35px;}
+.carousel-control{line-height: 400px;}
+h4{text-align: center; font-weight: bold; font-size: 1.4em;}
+.col-xs-4{}
+.col-xs-8 > p{margin-bottom: 30px;}
+.wp1 span{display:block; background-color: orange; width: 75px; height: 75px; border-radius: 100%; margin: 0 auto; line-height: 75px; font-size: 2.5em; text-align: center; margin-top: 30px; color: #fff;}
+.blue{background: url(../imgs/slide1_bg.jpg) bottom; height: 50px;}
+.red{background: url(../imgs/slide1_bg.jpg) top; height: 100px; color: #fff; }
+.red p{text-align: center;}
+.red p:first-child{font-size: 2rem; margin-top: 20px}
+.red p:last-child{font-size: 1.2rem;}
+.p2{font-size: 1.1em; line-height: 1.6em; padding: 0 10px;}
+.tet{font-size: 1.6em; text-align: left;}
+.tet > p{font-size: 1.6em;}
+.tet > ul{padding: 0;}
+.tet > ul > li{border-bottom: 1px solid #eee; padding: 20px 0 20px 30px; font-size: 16px; font-weight: bold;}
+li{list-style: none;}

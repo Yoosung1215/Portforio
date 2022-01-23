@@ -1,0 +1,72 @@
+@charset "utf-8";
+body,header,article,section,footer,div,h1,h2,h3,h4,ul,li,p,hr,iframe{margin:0; padding:0;}
+.hidden{display:none;}
+ul,li{list-style:none;}
+a{text-decoration:none;}
+iframe,hr{border:0;}
+
+
+/* Çì´õ¿µ¿ª */
+header{width:100%; height:265px; background-color:tomato;}
+header div#mein{width:1150px; height:105px; background-color:red; margin:0 auto; padding-top:20px;}
+header div#mein h1{width:194px; height:66px; float:left; margin-top:18px; margin-left:-7px;}
+header div#mein div#util{float:right; width:232px; height:20px; font-size:11px; margin-top:7px; margin-right:10px;}
+header div#mein div#util ul li{float:left; line-height:20px;}
+header div#mein div#util ul li a{color:gray;}
+header div#mein div#util ul li:nth-child(1){}
+header div#mein div#util ul li:nth-child(1)::after{content:""; display:block; width:1px; height:10px; background:gray; float:right; margin-left:13px; margin-right:19px; margin-top:5px;}
+header div#mein div#util ul li:nth-child(2){}
+header div#mein div#util ul li:nth-child(2)::after{content:""; display:block; width:1px; height:10px; background:gray; float:right; margin-left:15px; margin-right:21px; margin-top:5px;}
+header div#mein div#util ul li:nth-child(3){width:20px; height:20px; background:url(../images/facebook-ico.png) no-repeat; background-size:cover; text-indent:-9999px; margin-right:22px;}
+header div#mein div#util ul li:nth-child(4){width:20px; height:20px; background:url(../images/insta-ico.png) no-repeat; background-size:cover; text-indent:-9999px;}
+header div#mein nav{width:828px; height:183px; float:right; margin-top:40px;}
+header div#mein nav ul#first li{float:left; margin-right:10px;}
+header div#mein nav ul#first li:nth-child(1){width:124px;}
+header div#mein nav ul#first li:nth-child(2){width:115px;}
+header div#mein nav ul#first li:nth-child(3){width:109px;}
+header div#mein nav ul#first li:nth-child(4){}
+header div#mein nav ul#first li:nth-child(5){}
+header div#mein nav ul#first li:nth-child(6){}
+/* ºñÁÖ¾ó */
+article{height:500px; margin-top:123px; margin-bottom:90px; background:url(../images/bg-menu.jpg) no-repeat center; background-size:cover;}
+article > div#visual{width:548px; height:132px; margin:auto; padding-top:150px;}
+article > div#visual p{text-align:center;}
+article > div#visual p:nth-child(1){font-size:42px;}
+article > div#visual p:nth-child(3){font-size:18px;}
+article > div#visual hr{width:40px; height:2px; background:#000; margin:35px auto 35px;}
+
+article div#menu1{width:850px; height:38px; margin:138px auto; background:#fff;}
+article div#menu1 li{float:left; width:170px; height:38px; text-align:center; line-height:38px; border:1px solid #ccc; box-sizing:border-box;}
+article div#menu1 li:nth-child(1):hover a{display:block; background:yellow; font-weight:bold;}
+article div#menu1 li:nth-child(2):hover a{display:block; background:yellow; font-weight:bold;}
+article div#menu1 li:nth-child(3):hover a{display:block; background:yellow; font-weight:bold;}
+article div#menu1 li:nth-child(4):hover a{display:block; background:yellow; font-weight:bold;}
+article div#menu1 li:nth-child(5){background:#ffe6000; font-weight:bold;}
+article div#menu1 li:nth-child(5):hover a{display:block; background:yellow; font-weight:bold;}
+
+/* ÄÁÅÙÃ÷ */
+section{width:1150px; height:733px; margin:0 auto 97px;}
+section > div#content{width:238px; float:left; margin:0; }
+section > div#content p{font-size:22px;}
+section > div#content hr{width:1150px; height:1px; background:#c0c0c0; margin-top:22px;}
+section > div#moovie{width:800px; height:450px; margin:95px auto;}
+section > div#moovie iframe{width:100%; height:100%;margin:95px auto;}
+section > div#sns{width:83px; height:33px; margin:0 auto 50px; text-indent:-9999px;}
+section > div#sns li:nth-child(1){width:32px; height:33px; margin:0; }
+
+/* ÇªÅÍ */
+div#footer{height:257px; border-top:3px solid #ffeb00;}
+div#footer > div{width:1150px; height:254px; border:0; margin:auto;}
+
+
+div#footer h3{width:179px; height:47px; margin:30px auto; text-indent:-9999px; background:url(../images/flogo.png); background-size:cover; margin-bottom:35px;}
+div#footer div#address{width:516px; height:142px; margin:auto; text-align:center;}
+div#footer div address{font-style:normal; line-height:22px; font-size:12px; margin-bottom:40px;}
+div#footer div address span{border-right:1px solid #000; padding:0 16px;}
+div#footer div address span:nth-child(3){border-right:none;}
+div#footer div address span:nth-child(2)#bo{border-right:none;}
+div#footer div p#copy{text-transform:uppercase; font-size:13px;}
+
+div#footer div#family{float:right; width:175px; height:24px; border:1px solid #000; font-size:13px; line-height:24px;}
+div#footer div#family a{margin-left:7px;}
+div#footer h4 a{width:60px; height:60px; background:url(../images/off.png) no-repeat; position:fixed; right:200px; bottom:20px;}

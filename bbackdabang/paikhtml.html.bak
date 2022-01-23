@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8" />
+  <title>빽다방</title>
+  <link rel="stylesheet" href="./css/paikcss.css" />
+ </head>
+ <body>
+	<!-- 헤더영역 -->
+	<header>
+		<h2 class="hidden">헤더영역</h2>
+	<div id="util">
+		<h1 id="logo"><a href="">빽다방메인로고</a></h1>
+		<nav id="nav1">
+			<ul id="ul1">
+				<li><a href="">더본코리아</a></li>
+				<li><a href="">매장찾기</a></li>
+				<li><a href="">페이스북</a></li>
+				<li><a href="">인스타그램</a></li>
+			</ul>
+			<ul id="ul2">
+				<li><a href="">빽다방</a></li>
+				<li><a href="">메뉴</a></li>
+				<li><a href="">소식</a></li>
+				<li><a href="">커뮤니티</a></li>
+				<li><a href="">매장안내</a></li>
+				<li><a href="">창업안내</a></li>
+				<li><a href="">고객의소리</a></li>
+			</ul>
+		</nav>
+		</div>
+	<div id="util2">
+		<nav id="nav2">
+			<div>
+				<ul>
+					<li><a href="">CEO 인사말</a></li>
+					<li><a href="">빽다방 소개</a></li>
+					<li><a href="">커피이야기</a></li>
+				</ul>
+				<ul>
+					<li><a href="">신메뉴</a></li>
+					<li><a href="">커피</a></li>
+					<li><a href="">음료</a></li>
+					<li><a href="">아이스크림/디저트</a></li>
+					<li><a href="">빽스치노</a></li>
+				</ul>
+				<ul>
+					<li><a href="">소식</a></li>
+					<li><a href="">이벤트</a></li>
+					<li><a href="">친절 우수매장</a></li>
+				</ul>
+				<ul>
+					<li><a href="">커피클래스</a></li>
+				</ul>
+				<ul>
+					<li><a href="">매장찾기</a></li>
+				</ul>
+				<ul>
+				<li><a href="">가맹정보 및 절차</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	</header>
+	<!-- 비주얼영역 -->
+	<article>
+	<h2 class="hidden">비주얼영역</h2>
+	</article>
+	<!-- 컨텐츠영역 -->
+	<section>
+	<h2 class="hidden">컨텐츠영역</h2>
+	</section>
+	<!-- 푸터영역 -->
+	<footer>
+	<h2 class="hidden">푸터영역</h2>
+	</footer>
+  
+ </body>
+</html>

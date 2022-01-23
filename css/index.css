@@ -1,0 +1,1432 @@
+/* reset */
+
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+     margin: 0;
+    padding: 0;
+    font-family: 'GmarketSansLight';
+}
+html{
+    font-size: 14px;
+}
+body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden !important;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+li{
+    list-style: none;
+}
+
+/* modal start */
+
+.modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9999;
+    display: none;
+
+}
+.modal > div{
+    width: 80%;
+    height: 80%;
+}
+.modal img{
+    position: absolute;
+    top: 15%;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto auto;
+}
+
+
+
+/* modal end */
+/* header */
+.header{
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    position: fixed;
+    z-index: 999;
+    opacity: 1;
+}
+.header > ul{
+    display: flex;
+    position: absolute;
+    right: 5%;
+    line-height: 60px;
+}
+.header > ul > li{
+    padding: 0 3vw;
+    text-align: center;
+    position: relative;
+}
+.header > ul > li > a{
+    font-family: 'GmarketSansMedium';
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.header > ul > li > a:hover{
+    font-weight: bold;
+}
+.fas{
+    background-color: #fff;
+    position: fixed;
+    cursor: pointer;
+    right: 30px;
+    top: 5%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px !important;
+    border-radius: 100%;
+    z-index: 99999;
+    text-align: center;
+    font-size: 2rem;
+    color: #000;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+}
+.fas:hover{
+    background-color: rgba(46,54,122,1);
+    color: #fff;
+}
+
+.headerc{
+    width: 250px;
+    height: 100vh;
+    min-height: 959px;
+    position: fixed;
+    right: 0;
+    z-index: 9999;
+    background-color: rgba(255,255,255,0.9);
+    box-shadow: -5px 0 5px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: all 1s;
+    transform: translate(100%,0);
+}
+.headerc > ul{
+    width: 100%;
+    top: 15%;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+}
+.headerc > ul > li{
+    height: 60px;
+    line-height: 60px;
+    text-align: right;
+    margin-right: 30px;
+
+}
+.headerc > ul > li:nth-child(3){
+    height: auto;
+}
+.headerc > ul > li > a{
+    font-family: 'GmarketSansMidium';
+    font-size: 2rem;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.headerc > ul > li > a:hover{
+    font-weight: bold;
+}
+.dropdownc{
+    display: none;
+}
+.dropdownc > li{
+    height: 40px;
+    line-height: 40px;
+}
+.dropdownc > li > a{
+    font-size: 1.4rem;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.dropdownc > li > a:hover{
+    font-weight: bold;
+}
+.dropdown{
+    width: 100%;
+    left: 0;
+    display: flex;
+    display: none;
+    flex-flow: column;
+    position: absolute;
+}
+.dropdown > li{
+    width: 100%;
+    background-color: #fff;
+    font-size: 0.8rem;
+}
+.dropdown > li > a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.dropdown > li > a:hover{
+    font-weight: bold;
+}
+.Home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    position: relative;
+}
+.wrap{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.proimgwrap{
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+.profileimg{
+    background: url(../img/profile1.png) no-repeat bottom center #fff;
+    background-size: contain;
+    width: 325px;
+    height: 325px;
+    margin: 0 auto;
+    border-radius: 100%;
+    position: relative;
+    align-self: center;
+    transition: all 1s;
+    transform-origin: center;
+}
+.proimgwrap span{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    display: block;
+    position: absolute;
+    transform: scale(0);
+    transform-origin: center;
+    opacity: 0;
+    z-index: -1;
+    animation-iteration-count: infinite;
+    animation-duration: 4s; /* 이 애니메이션을 몇초동안 실행할것인지 */
+    animation-timing-function:cubic-bezier(0.785, 0.135, 0.15, 0.86); /* 애니메이션의 속도 */
+     /* 재생방향을 설정 미설정시 지정된방향으로 재생하고 끝이다 */
+    background-color: #fff;
+}
+.proimgwrap span:nth-child(1){
+    animation-name: fadong1;
+
+}
+.proimgwrap span:nth-child(2){
+    animation-name: fadong1;
+    animation-delay: 1s;
+}
+@keyframes fadong1 {
+	25% {
+		opacity: 0.7;
+	}
+	
+	100% {
+		transform: scale(1.3);
+	}
+}
+@keyframes fadong {
+	25% {
+		opacity: 0.7;
+	}
+	
+	100% {
+		transform: scale(1.5);
+	}
+}
+.jaeryo{
+    display: none;
+}
+.ftext p{
+    display: inline-block;
+    width: auto;
+    color: #fff;
+    margin: 30px 0;
+    height: 100px;
+    line-height: 100px;
+    transition: all 1s;
+    transform-origin: center;
+}
+.ftext{
+    width: 50%;
+    align-self: center;
+    font-size: 1rem;
+    display: flex;
+    flex-flow: column;
+    transition: all 1s;
+    transform-origin: center;
+}
+.ftext p:nth-child(1){
+    font-size: 3rem;
+}
+.ftext p:nth-child(2){
+    font-size: 3.6rem;
+    font-family: 'GmarketSansMedium';
+}
+.ftext p:nth-child(3){
+    font-size: 4rem;
+    font-family: 'GmarketSansBold';
+}
+.icon-scroll,
+.icon-scroll:before{
+  position: absolute;
+  left: 50%;
+}
+
+.icon-scroll{
+  width: 40px;
+  height: 70px;
+  margin-left: -20px;
+  bottom: 10%;
+  margin-top: -35px;
+  box-shadow: inset 0 0 0 1px #fff;
+  border-radius: 25px;
+}
+
+.icon-scroll:before{
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  margin-left: -4px;
+  top: 8px;
+  border-radius: 4px;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+}
+
+@keyframes scroll{
+  0%{
+    opacity: 1
+}
+    
+  100%{
+    opacity: 0;
+    transform: translateY(46px)
+}
+}
+
+
+@media all and (max-width: 1200px){
+    .ftext p{
+        height: 75px;
+        line-height: 75px;
+    }
+    .ftext p:nth-child(1){
+        font-size: 2.6rem;
+    }
+    .ftext p:nth-child(2){
+        font-size: 3rem;
+        font-family: 'GmarketSansMedium';
+    }
+    .ftext p:nth-child(3){
+        font-size: 4rem;
+        font-family: 'GmarketSansBold';
+    }
+    .profileimg{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media all and (max-width: 992px){
+    html{
+        font-size: 12px;
+    }
+    .headerc{
+        width: 200px;        
+    }
+    .profileimg{
+        width: 225px;
+        height: 225px;
+    }
+}
+
+@media all and (max-width: 768px){
+    .wrap{
+        flex-flow: column;
+    }
+    .proimgwrap{
+        width: 100%;
+    }
+    .profileimg{
+        width: 225px;
+        height: 225px;
+    }
+    .ftext{
+        text-align: center;
+        width: 100%;
+    }
+    .ftext p{
+        height: 50px;
+        line-height: 50px;
+    }
+    .modal img{
+        max-width: 490px;
+    }
+    .icon-scroll{
+        bottom: 0%;
+        width: 40px;
+        height: 70px;
+        bottom: 40%;
+        margin-left: -20px;
+        box-shadow: inset 0 0 0 1px #fff;
+        border-radius: 25px;
+    }
+}
+@media all and (max-width: 536px){
+    html{
+        font-size: 10px;
+    }
+    .headerc{
+        width: 150px;
+    }
+    .profileimg{
+        width: 200px;
+        height: 200px;
+        margin-top: 125px !important;
+    }
+    .modal img{
+        max-width: 400px;
+    }
+
+}
+@media all and (max-width:375px){
+
+    .ftext p:nth-child(1){
+        font-size: 1.4rem;
+    }
+    .ftext p:nth-child(2){
+        font-size: 1.6rem;
+        font-family: 'GmarketSansMedium';
+    }
+    .ftext p:nth-child(3){
+        font-size: 2.4rem;
+        font-family: 'GmarketSansBold';
+    }
+    .profileimg{
+        width: 225px;
+        height: 225px;
+    }
+    .modal img{
+        max-width: 300px;
+    }
+
+}
+
+/* About */
+.About{
+    width: 100%;
+    height: 100vh;
+    min-height: 959px;
+    border-radius: 75px;
+    background-color: rgba(255,255,255,0.9);
+    opacity: 0;
+    margin-top: 50px;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: space-between;
+}
+.About h2{
+    font-family: 'GmarketSansBold';
+    color: #3e3e3e;
+    font-size: 3rem;
+    width: 90%;
+    height: 10%;
+    margin: 0 auto;
+    border-bottom: 1px solid #000;
+    position: relative;
+    box-sizing: border-box;
+    line-height: 10vh;
+    margin-bottom: 30px;
+}
+.Aboutwrap{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    width: 50%;
+}
+.left > div{
+    transform: translate(-50px);
+    transition-property: transform,opacity;
+    transition-duration: 1s;
+    opacity: 0;
+}
+
+.left > div.active{
+    transform: translate(0);
+    opacity: 1;
+}
+.right > div{
+    transform: translate(-50px);
+    transition-property: transform,opacity;
+    transition-duration: 1s;
+    opacity: 0;
+}
+
+.right > div.active{
+    transform: translate(0);
+    opacity: 1;
+}
+body > div{
+    transition: all 1s;
+}
+body > div.oct{
+    opacity: 1;
+}
+
+.right{
+    width: 50%;
+}
+.Profile{
+    width: 100%;
+    display: flex;
+}
+.tl{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    margin-right: 50px;
+    align-content: center;
+}
+.tl h3{
+    font-size: 2rem;
+}
+.License{
+    transition-delay: 1s;
+}
+.Education{
+    transition-delay: 0.5s;
+}
+.tl > img{
+    animation-name: imgani;
+    animation-iteration-count: infinite;
+    animation-duration: 1s; /* 이 애니메이션을 몇초동안 실행할것인지 */
+    animation-timing-function:linear; /* 애니메이션의 속도 */
+    animation-direction: alternate; /* 재생방향을 설정 미설정시 지정된방향으로 재생하고 끝이다 */
+}
+@keyframes imgani{
+    from{
+        transform: translate(0,-5px);
+        
+    }
+    to{
+        transform: translate(0,5px);
+    }
+}
+.tl img{
+    display: block;
+    width: 65px;
+    height: 65px;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+.Ptext{
+    margin-top: 75px;
+}
+.Ptext p{
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+.Ptext p span{
+    margin-left: 43px;
+    font-weight: bold;
+}
+.Ptext p:nth-child(2) span{
+    margin-left: 25px;
+}
+.Ptext p:last-child{
+    margin-bottom: 0;
+}
+.Ptext p:last-child span{
+    font-size: 1rem;
+}
+.License{
+    width: 100%;
+    justify-self: left;
+    display: flex;
+    margin-top: 25px;
+}
+.License .tl{
+    margin-right: 25px;
+}
+.Ltext{
+    margin-top: 75px;
+}
+.Ltext p{
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+.Ltext p span{
+    margin-left: 43px;
+    font-weight: bold;
+}
+.Ltext p:nth-child(0) span{
+    margin-left: 25px;
+}
+.Ltext p:last-child{
+    margin-bottom: 0;
+}
+.Education{
+    width: 100%;
+    display: flex;
+    height: 100%;
+
+}
+.Etext{
+    margin-top: 75px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+.Etext p{
+    font-size: 1.2rem;
+}
+.Etext p span{
+    font-weight: bold;
+}
+.Etext img{
+    display: block;
+    width: 245px;
+    height: 210px;
+    margin-right: 20px;
+    justify-self: center;
+    align-self: end;
+}
+.Aboutwrap + div.active{
+    transform: translate(0);
+    opacity: 1;
+}
+.Skill{
+    width: 80%;
+    margin: 0 auto;
+    transform: translate(-50px);
+    transition-property: transform,opacity;
+    transition-duration: 1s;
+    transition-delay: 1.5s;
+    opacity: 0;
+}
+
+.Skill > h3{
+    font-size: 2rem;
+    margin-top: 50px;
+
+}
+.Skillwrap{
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.Skillwrap > div{
+    width: 50%;
+    display: flex;  
+    position: relative;
+}
+.Skillwrap > div{
+    margin-bottom: 50px;
+
+}
+.text{
+    align-self: center;
+    font-size: 1rem;
+    position: absolute;
+    left: 35%;
+}
+.simg{
+    align-self: center;
+    display: flex;
+}
+.simg img{
+    display: block;
+    width: 65px;
+    height: 65px;
+    margin: 0 5px;
+}
+.js > .simg > img{
+
+    width: 130px;
+}
+@media all and (max-height:1200px){
+
+}
+@media all and (max-width: 1200px){
+    .text{
+        left: 40%;
+    }
+    .About{
+        height: auto;
+    }
+}
+
+@media all and (max-width: 992px){
+    .Aboutwrap{
+        flex-flow: column;
+    }
+    .About > h2{
+        text-align: center;
+    }
+    .Aboutwrap > div{
+        margin-bottom: 50px;
+    }
+    .atext{
+        margin: 0;
+        text-align: center;
+    }
+    .left{
+        width: 100%;
+    }
+    .left > div{
+        flex-flow: column;
+        transform: translate(0);
+        opacity: 1;
+    }
+    .left > div > div{
+        align-self: center;
+    }
+    .tl{
+        margin: 0;
+    }
+    .tl img{
+        padding: 0;
+        margin: 25px 0;
+        align-self: center;
+    }
+    .License .tl{
+        margin: 0;
+    }
+    .right{
+        width: 100%;
+    }
+    .right > div{
+        flex-flow: column;
+        transform: translate(0);
+        opacity: 1;
+    }
+    .Education > div{
+        align-self: center;
+    }
+    .Etext > img{
+        align-self: center;
+        margin: 25px 0;
+        width: 65px;
+        height: 55px;
+    }
+    .Skill{
+        transform: translate(0);
+        opacity: 1;
+    }
+    .Skill h3{
+        text-align: center;
+        margin-top: 0;
+    }
+    .Skillwrap > div{
+        width: 100%;
+        margin-bottom: 50px;
+        flex-flow: column;
+    }
+    .text{
+        text-align: center;
+        position: static;
+        margin-top: 25px;
+    }
+    .left > div {
+        opacity: 1 !important;
+    }
+    .right > div{
+        opacity: 1 !important;
+    }
+    body > div{
+        opacity: 1 !important;
+    }
+}
+
+/* work */
+.Work > div.oct{
+    opacity: 1;
+}
+.Workwrap{
+    width: 100%;
+    height: 100vh;
+    min-height: 959px;
+    border-radius: 75px;
+    background-color: rgba(255,255,255,0.9);
+    margin-top: 100px;
+    position: relative;
+    transition: all 1s;
+    opacity: 0;
+
+}
+.Workwrap h2{
+    font-family: 'GmarketSansBold';
+    color: #3e3e3e;
+    font-size: 3rem;
+    width: 90%;
+    height: 10%;
+    margin: 0 auto;
+    border-bottom: 1px solid #000;
+    position: relative;
+    box-sizing: border-box;
+    line-height: 10vh;
+}
+
+.Workwrap h2::after{
+    content: "";
+    display: block;
+    border-bottom: 1px solid rgba(255,255,255,0.9);
+    width: 55%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.work3 h2::after{
+    display: none;
+}
+.work2 h2::after{
+    content: "";
+    display: block;
+    border-bottom: 1px solid rgba(255,255,255,0.9);
+    width: 55%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.work5 h2::after{
+    content: "";
+    display: block;
+    border-bottom: 1px solid rgba(255,255,255,0.9);
+    width: 55%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.fst span{
+    color: #fff !important;
+}
+.Workwrap h2 > span{
+    display: block;
+    position: absolute;
+    font-size: 1.6rem;
+    right: 0;
+    top: 10vh;
+}
+.work1wrap{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: wrap;
+    height: 90%;
+    box-sizing: border-box;
+
+}
+.w2 .monitor{
+    border-radius: 0 0 0 75px;
+}
+.work1wrap > div{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.wtext{
+    width: 50%;
+    height: 100%;
+    padding: 50px 0;
+    transition: all 1s;
+
+}
+.monitor{
+    width: 50%;
+    height: 100%;
+    background-color: rgba(46,54,122,0.5);
+    align-self: center;
+    border-radius: 0  0 75px 0;
+    display: flex;
+    
+}
+.monibg{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+.moniwrap{
+    width: 90%;
+    height: 70%;
+    background-color: #000;
+    align-self: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto  ;
+    display: flex;
+    border-radius: 25px;
+}
+.moni{
+    width: 93%;
+    height: 90%;
+    border-radius: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+    align-self: center;
+}
+.moni{ -ms-overflow-style: none; }
+.moni::-webkit-scrollbar{ display:none; }
+.moni img{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+.wtext{
+    box-sizing: border-box;
+    position: relative;
+    z-index: 3;
+    margin: 0 auto;
+}
+.wtext > div{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column;
+}
+
+.wtext h3{
+    font-size: 1.6rem;
+    font-family: 'GmarketSansMedium';
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translate(0,-100px);
+    transition: all 1s;
+}
+.wtext h3.active{
+    transform: translate(0);
+    opacity: 1;
+}
+.wtext p{
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+    text-align: center;
+    font-family: 'GmarketSansMedium';
+    opacity: 0;
+    transform: translate(0,-100px);
+    transition: all 1s;
+}
+.wtext p.active{
+    transform: translate(0);
+    opacity: 1;
+}
+.wtext p:nth-child(2){
+    transition-delay: 0.25s;
+}
+.wtext p:nth-child(3){
+    transition-delay: 0.5s;
+}
+.wtext p:nth-child(4){
+    transition-delay: 0.75s;
+}
+.wtext2 p{
+    text-align: center;
+}
+.wtext p span{
+    margin-top: 25px;
+    display: block;
+    font-size: 1.2rem;
+    font-family: 'GmarketSansLight';
+}
+.wtext a{
+    display: block;
+    border: 1px solid #000;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    text-align: center;
+    align-self: center;
+    padding: 10px 25px;
+    margin: 20px 0;
+    position: relative;
+    opacity: 0;
+    transform: translate(0,-100px);
+    transition: all 1s;
+    transition-delay: 1s;
+}
+.wtext a.active{
+    transform: translate(0);
+    opacity: 1;
+}
+@media all and (max-width:992px){
+    .Work > div{
+        opacity: 1 !important;
+    }
+    .Workwrap{
+        height: auto;
+    }
+    .Workwrap > h2{
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+    }
+    .Workwrap > h2::after{
+        content: "";
+        display: none;
+    }
+    .Workwrap h2 > span{
+        left: 0;
+        top: 100px;
+        margin: 0 auto;
+        color: #3e3e3e !important;
+    }
+    .monitor{
+        width: 100%;
+        border-radius: 0 0 0 0;
+        padding-top: 100px;
+        padding-bottom: 25px;
+        background: none;
+    }
+    .monibg{
+        width: 50%;
+        height: 90%;
+        position: relative;
+        z-index: 2;
+    }
+    .moniwrap{
+        width: 60%;
+        background-color: #000;
+        align-self: center;
+        padding: 2% 0 ;
+    }
+    .moni{
+        width: 93%;
+        height: 90%;
+        border-radius: 20px;
+        margin: 0 auto;
+        overflow: hidden scroll;
+        align-self: center;
+    }
+    .work1wrap{
+        flex-flow: column-reverse wrap;
+    }
+    .w2{
+        flex-flow: column;
+    }
+    .work5 .work1wrap{
+        flex-flow: column;
+    }
+    .wtext{
+        padding: 5% 0;
+    }
+    .wtext p{
+        text-align: center;
+        transform: translate(0) !important;
+        opacity: 1 !important;
+    }
+    .wtext h3{
+        transform: translate(0) !important;
+        opacity: 1 !important;
+    }
+    .wtext a{
+        transform: translate(0) !important;
+        opacity: 1 !important;
+    }
+    .monitor > div{
+        bottom: 10%;
+    }
+    .w3 .swiper-wrapper img{
+        opacity: 1 !important;
+    }
+    .w3 .swiper-slide::after{
+        display: none !important;
+    }
+}
+
+/* carousel */
+.w3 h3{
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'GmarketSansMedium';
+    font-weight: normal;
+
+}
+.w3{
+    padding: 0 0 50px;
+    box-sizing: border-box;
+    position: relative;
+}
+.w3 .swiperwrap{
+    width: 100%;
+    height: 70% !important;
+    position: absolute;
+    bottom: 10%;
+    margin: auto 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+.w3 .swiper-container{
+    width: 80%;
+    height: 90%;
+    border-radius: 50px;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.2);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.w3 .swiper-wrapper{
+    width: 100% !important;
+    box-sizing: border-box;
+    padding: 50px 0;
+}
+.w3 .swiper-wrapper img{
+    display: block;
+    max-width: 490px;
+    max-height: 490px;
+    width: 100%;
+    transition: all 1s;
+    opacity: 0.7 !important;
+    outline: 2px solid #eee ;
+    outline-offset: -14px;
+}
+.w3 .swiper-slide:hover img{
+    opacity: 1 !important;
+    outline: none;
+}
+html, body { position: relative;}
+
+.w3 .swiper-slider{
+    width: 100% !important;
+    max-width: 490px;
+    max-height: 490px;
+    position: relative !important;
+
+}
+.swiper-slider > div{
+    width: 100%;
+    height: 100%;
+}
+.slidespa{
+    position: absolute;
+    font-size: 2rem;
+    font-family:'GmarketSansMedium';
+    color: #fff;
+    top: 50%;
+    margin-top: -12px !important;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.swiper-slide{
+    text-align: center;
+    font-size: 18px;
+    background-color: rgba(255,255,255,0);
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-itrems: center;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+}
+.swiper-container-vertical>.swiper-pagination-bullets{
+    top: unset !important;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+}
+.w3 .swiper-button-prev{
+    background-image: url(../img/prevbtn.png) !important;
+}
+.w3 .swiper-button-next{
+    background-image: url(../img/nextbtn.png) !important;
+}
+
+@keyframes fadeIn{
+    from{
+        transform-origin: center;
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@media all and (max-width:768px){
+    .w3 .swiper-container{
+        height: 80%;
+    }
+    .swiper-slide{
+        padding: 0 25px;
+    }
+    .hashtag > p{
+        opacity: 1 !important;
+        transform: translate(0);
+    }
+}
+@media all and (max-width:536px){
+
+
+}
+@media all and (max-width:375px){
+    .icon-scroll{display: none !important;}
+}
+
+canvas{
+    position: fixed;
+    z-index: -2;
+    width: 100% !important;
+    height: 100%;
+}
+.wtext a > span{
+    display: block;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    animation-name: fadeIn; /* 이 애니메이션을 실행한다 */
+    animation-duration: 3s; /* 이 애니메이션을 몇초동안 실행할것인지 */
+    animation-timing-function: ease; /* 애니메이션의 속도 */
+    animation-direction: normal; /* 재생방향을 설정 미설정시 지정된방향으로 재생하고 끝이다 */
+    animation-iteration-count: infinite; /* 애니메이션의 횟수 3을 입력하면 3번 작동하고 끝 */
+}
+
+/* contact */
+.Contact{
+    width: 100%;
+    height: 100vh;
+    min-height: 959px;
+    border-radius: 75px 75px 0 0;
+    background-color: rgba(255,255,255,0.9);
+    margin-top: 100px;
+    transition: all 1s;
+    opacity: 0;
+    position: relative;
+}
+.Contact h2{
+    height: 10%;
+    line-height: 108px;
+    font-family: 'GmarketSansBold';
+    color: #3e3e3e;
+    font-size: 3rem;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid #000;
+}
+.ctext{
+    width: 80%;
+    height: 90%;
+    padding: 30px 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+}
+.hashtag{
+    position: relative;
+    height: 45%;
+}
+.tag{
+
+    font-size: 2.6rem !important;
+    font-weight: bold;
+    padding: 0 20px;
+    position:absolute;
+}
+@keyframes moving{
+    from{
+        transform:translate(0,3px);
+    }
+    to{
+        transform:translate(0,-3px);
+    }
+}
+.hashtag > p{
+
+    transition-property: transform,opacity;
+    transition-duration: 1s;
+    opacity: 0;
+}
+
+.hashtag > p:nth-child(1){
+    transition-delay: 0.25s;
+    transform: translate(50px);
+}
+.hashtag > p:nth-child(2){
+    transition-delay: 0.35s;
+    transform: translate(50px);
+}
+.hashtag > p:nth-child(3){
+    transition-delay: 0.45s;
+    transform: translate(-50px);
+}
+.hashtag > p:nth-child(4){
+    transition-delay: 0.55s;
+    transform: translate(-50px);
+}
+.hashtag > p:nth-child(5){
+    transition-delay: 0.65s;
+    transform: translate(50px);
+}
+.hashtag > p:nth-child(6){
+    transition-delay: 0.75s;
+    transform: translate(-50px);
+}
+
+.hashtag p.active{
+    transform: translate(0);
+    opacity: 1;
+}
+.tagt{
+    display: block;
+    position: relative;
+}
+.bgt{
+    position: absolute;
+    display: block;
+    z-index: 0;
+    right: 0;
+    width: 100%;
+    height: 35%;
+    bottom: 0;
+
+}
+.tag:nth-child(1) .bgt{
+    background-color: rgba(99,125,235,0.7);
+
+}
+.tag:nth-child(2) .bgt{
+    background-color: rgba(102,255,106,0.7);
+}
+.tag:nth-child(3) .bgt{
+    background-color: rgba(238,33,49,0.7);
+}
+.tag:nth-child(4) .bgt{
+    background-color: rgba(151,220,230,0.7);
+}
+.tag:nth-child(5) .bgt{
+    background-color: rgba(229,168,82,0.7);
+}
+.tag:nth-child(6) .bgt{
+    background-color: rgba(252,246,226,1);
+}
+.tag:nth-child(1){ top: 25%; right: 25%; font-size: 2rem !important; 
+    animation-name: movelr;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.tag:nth-child(2){ left: 40%; top: 10%; font-size: 1.6rem !important; 
+    }
+.tag:nth-child(3){ bottom: 33%; right: 50%; font-size: 1.2rem !important; 
+    }
+.tag:nth-child(4){ top: 70%; left: 25%; font-size: 2.2rem !important; 
+    }
+.tag:nth-child(5){ top: 60%; left: 55%; font-size: 1.8rem !important; 
+    }
+.tag:nth-child(6){ top: 35%; left: 20%; font-size: 2.2rem !important; 
+    }
+.ctwrap{
+    box-sizing: border-box;
+    height: 40%;
+    display: flex;
+    flex-flow: column;
+    padding: 20px 0;
+}
+.ctext h3{
+    font-size: 1.8rem;
+    font-weight: normal;
+    font-family: 'GmarketSansMedium';
+}
+.ctext p{
+    font-size: 1.4rem;
+    margin: 5px 0;
+}
+.ctwrap p span{
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+.ctwrap p:last-of-type{
+    margin-top: 25px;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    font-family: 'GmarketSansMedium';
+}
+.ctext a{
+    font-size: 1.4rem;
+    border-radius: 50px;
+    padding: 10px 20px;
+    align-self: center;
+}
+
+.kakao{
+    background-color: #FAE100;
+    margin: 15px 0;
+}
+.naver{
+    background-color: #04CF5C;
+    color: #fff;
+    margin-bottom: 15px;
+}
+.w3c{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.w3c p{
+    margin: 0 15px !important;
+    height: auto !important;
+}
+.w3c p a{
+    display: block;
+    padding: 0;
+    height: auto !important;
+}

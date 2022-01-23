@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <title>〈찰떡맛남〉 우리 고장 특산물과 크림 가득 찹살떡의 찰떡만남!</title>
+  <link rel="stylesheet" href="./css/paiksub8.css" />
+ </head>
+ <body>
+	<!-- 헤더영역 -->
+	<header>
+		<h2 class="hidden">헤더영역</h2>
+		<div id="mein">
+		<h1><a href=""><img src="./images/logo.png" alt="빽다방메인로고" style="width:194px; height:66px;" /></a></h1>
+		<div id="util">
+			<ul>
+				<li><a href="">더본코리아</a></li>
+				<li><a href="">매장찾기</a></li>
+				<li><a href="">페이스북</a></li>
+				<li><a href="">인스타그램</a></li>
+			</ul>
+		</div>
+			<nav>
+				<ul id="first">
+					<li class="submenu"><a href="">빽다방</a>
+						<ul>
+							<li><a href="">CEO 인사말</a></li>
+							<li><a href="">빽다방 소개</a></li>
+							<li><a href="">커피이야기</a></li>
+						</ul>
+					</li>
+					<li class="submenu"><a href="">메뉴</a>
+						<ul>
+							<li><a href="">신메뉴</a></li>
+							<li><a href="">커피</a></li>
+							<li><a href="">음료</a></li>
+							<li><a href="">아이스크림/디저트</a></li>
+							<li><a href="">빽스치노</a></li>
+						</ul>
+					</li>
+					<li class="submenu"><a href="">소식</a>
+						<ul>
+							<li><a href="">소식</a></li>
+							<li><a href="">이벤트</a></li>
+							<li><a href="">친절 우수매장</a></li>
+						</ul>
+					</li>
+					<li class="submenu"><a href="">커뮤니티</a>
+						<ul>
+							<li><a href="">커피클래스</a></li>
+						</ul>
+					</li>
+					<li class="submenu"><a href="">매장안내</a>
+						<ul>
+							<li><a href="">매장찾기</a></li>
+						</ul>
+					</li>
+					<li class="submenu"><a href="">창업안내</a>
+						<ul>
+							<li><a href="">가맹정보 및 절차</a></li>
+						</ul>
+					</li>
+					<li class="submenu"><a href="">고객의 소리</a>
+                    </li>
+                </ul>
+            </nav>
+		</div>
+    <div id="headerfoot">
+    </div>
+	</header>
+	<!-- 비주얼영역 -->
+	<article>
+	   <h2 class="hidden">비주얼영역</h2>
+        <div id="meintext">
+            <h1>소식</h1>
+            <div></div>
+            <p>다양한 이벤트와 새로운 소식을 확인하세요!</p>
+        </div>
+		<div id="artmenu">
+			<ul>
+				<li><a href="./paikhtml2.html">전체보기</a></li>
+				<li><a href="">소식</a></li>
+				<li><a href="">이벤트</a></li>
+				<li><a href="">친절우수매장</a></li>
+			</ul>
+		</div>
+	</article>
+	<!-- 컨텐츠영역 -->
+	<section id="sub">
+		<h2 class="hidden">컨텐츠영역</h2>
+		<div id="mainsec">
+			<table>
+				<tr>
+					<td><span>[소식]</span>〈찰떡맛남〉 우리 고장 특산물과 크림 가득 찹살떡의 찰떡만남!</td>
+					<td>2021-03-29</td>
+					<td>조회수 3216</td>
+				</tr>
+			</table>
+            <div>
+				<img src="./images/21_01_찰떡맛남_-포스터_A1_확인용.jpg" alt="" />
+            </div>
+			<table>
+				<tr>
+						<td><a href="./paikhtmlsub10.html">이전글</a></td>
+						<td><a href="./paikhtmlsub10.html">탄생! 직화의 풍미 가득한 ‘남도떡갈비샌드’</a></td>
+						<td><a href="./paikhtmlsub10.html">2021-03-09</a></td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+						<td><a href="./paikhtmlsub8.html">다음글</a></td>
+						<td><a href="./paikhtmlsub8.html">〈퐁당치노〉 빽다방 대표 시그니처 메뉴에 아낌없이 퐁당!</a></td>
+						<td><a href="./paikhtmlsub8.html">2021-03-29</a></td>
+				</tr>
+			</table>
+			<a href="">목록</a>
+		</div>	   
+	</section>
+	<!-- 푸터영역 -->
+	<footer>
+	<h2 class="hidden">푸터영역</h2>
+	<div id="footer">
+		<h2 class="hidden">푸터영역</h2>
+		<div>
+			<div id="family"><a href="">패밀리사이트 바로가기</a></div>
+			<h3><a href="">푸터로고</a></h3>
+			<div id="address">
+				<address>
+					<p><span>(주)더본코리아</span><span>사업자등록번호 211-86-00870</span><span>대표이사 백종원</span></p>
+					<p><span>주소:서울시 강남구 봉은사로1길39 유성빌딩5~6층</span><span id="bo">팩스:02-511-3864</span></p>
+					<p><span>본사 대표전화:02-549-3864</span><span>가맹상담전화:02-3447-0410</span><span>고객센터:1544-2360</span></p>
+				</address>
+				<p id="copy">copyright&copy; 2018 theborn korea inc.all rights reserved</p>
+			</div>
+		</div>
+		<h4><a href=""></a></h4>
+	</div>
+  
+	</footer>
+ </body>
+</html>

@@ -1,0 +1,503 @@
+@charset "utf-8";
+
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+li{
+    list-style: none;
+}
+
+/* article */
+
+article{
+    width: 100%;
+    height: 430px;
+    position: relative;
+}
+article .bg{
+    width: 100%;
+    height: 100%;
+    background: url(../img/visual_05.jpg) no-repeat;
+    background-size: cover;
+}
+.artte{
+    width: 50%;
+    height: 160px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 115px;
+    color: #fff;
+}
+.artte div{
+    margin: 0 auto;
+    width: 1px;
+    height: 30px;
+    background-color: #fff;
+    margin-top: 5px;
+}
+.artte p{
+    padding: 0;
+    margin: 0;
+}
+.artte p:nth-child(1){
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0;
+}
+.artte h2{
+    font-size: 50px;
+    padding: 0 0 25px 0;
+    margin: 0;
+    font-weight: normal;
+}
+.artte p:nth-child(3){
+    font-size: 16px;
+    font-weight: bold;
+}
+.rb{
+    width: 100%;
+    height: 55px;
+    background-color: #dc2d34;
+
+}
+.rb a{
+    color: #fff;
+}
+.rb > ul{
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+}
+.rb > ul > a{
+    height: 55px;
+    line-height: 55px;
+    border-left: 1px solid #eee;
+    padding: 0 25px;
+    font-size: 1.2em;
+}
+.rb > ul > li{
+    position: relative;
+    width: 175px;
+    height: 55px;
+    line-height: 55px;
+    border-left: 1px solid #eee;
+    cursor: pointer;
+}
+.rb > ul > li > a{
+    text-indent: 25px;
+    display: block;
+    
+}
+.rb > ul > li::after{
+    content: "";
+    display: block;
+    width: 11px;
+    height: 11px;
+    background: url(../img/btn_down.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -5px;
+}
+.rb > ul > li:last-child{
+    border-right: 1px solid #eee;
+}
+.drop{
+    display: none;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+
+}
+.drop > li{
+    height: 30px;
+    line-height: 30px;
+
+}
+.drop a{
+    color: #000;
+}
+.btn{
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+}
+.btn ul{
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.btn ul li{
+
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    border-radius: 25px 25px 0 0;
+    position: relative;
+    transition: background-color 0.5s;
+}
+.btn ul li.on{
+    background-color: #fcf37c;
+}
+.btn ul li a{
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    color: #fff;
+    background-color: #dc2d34;
+    display: block;
+    width: 80%;
+    height: 80%;
+    line-height: 75px;
+    border-radius: 20px 20px 0 0;
+    font-size: 24px;
+}
+.meinsec{
+    width: 100%;
+    position: relative;
+    margin-top: -20px;
+    z-index: 1;
+
+}
+.meinsec div{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #fcf37c;
+    border-radius: 25px;
+    padding: 40px 0;
+}
+.meinsec div ul.meintext{
+    margin-bottom: 40px;
+}
+.meinsec div ul.meintext li{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fffa9b;
+    border-radius: 15px;
+    box-sizing: border-box;
+    border: 2px solid #dc2d34;
+    position: relative;
+    padding: 20px 80px;
+    margin-bottom: 20px;
+}
+.meinsec div ul.meintext li:last-child{
+    margin-bottom: 0;
+}
+.meinsec div ul.meintext li dt::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: -55px;
+    width: 31px;
+    height: 17px;
+    background: url(../img/btn_slidedown.png) no-repeat;
+    background-size: cover;
+}
+.meinsec div ul.meintext li dt{
+    font-size: 18px;
+    width: 100%;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.meinsec div ul.meintext li dl{
+    position: relative;
+    text-indent: 0;
+    line-height: 24px;
+}
+.meinsec div ul.meintext li dl dd{
+    font-size: 16px;
+    margin-top: 40px;
+    display: none;
+}
+ul.numbtn{
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between
+}
+ul.numbtn li{
+    padding: 0 5px;
+}
+ul.numbtn li:first-child a{
+    display: block;
+    width: 17px;
+    height: 31px;
+    background: url(../img/numbtnleft.png) no-repeat center;
+}
+ul.numbtn li:last-child a{
+    display: block;
+    width: 17px;
+    height: 31px;
+    background: url(../img/numbtnright.png) no-repeat center;
+}
+ul.numbtn li a{
+    font-size: 18px;
+    font-weight: bold;
+    color: #2d2d2d;
+}
+ul.numbtn li a:hover{
+    color:#dc2d34;
+}
+
+/* footer start */
+
+.footer{
+    width: 100%;
+}
+.footernavwrap{
+    width: 100%;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+
+}
+.footernavwrap div{
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+.footernavwrap div ul{
+    display: flex;
+}
+.footersns img{
+    display: block;
+}
+.footernavwrap div li{
+    padding-right: 20px;
+}
+.footernavwrap div li:last-child{
+    padding-right: 0;
+}
+.footeraddresswrap{
+    width: 100%;
+}
+.address{
+    width: 65%;
+    margin: 0 auto;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+}
+.foottext ul{
+    display: flex;
+    flex-flow: wrap;
+    padding: 0 20px;
+}
+.foottext ul li{
+    font-size: 13px;
+}
+.foottext ul li::after{
+    content: "|";
+    position: relative;
+    top: -3px;
+    font-size: 8px;
+    margin: -10px 10px 0;
+
+}
+.foottext ul li:last-child::after{
+    content: "";
+    display: none;
+}
+.foottext p {
+    font-size: 14px;
+    margin: 5px 0;
+    padding: 0 20px;
+}
+
+
+
+
+@media all and (max-width:1200px) {
+
+}
+
+@media all and (max-width:992px) {
+    .meinsec div{
+        width: 90%;
+    }
+
+    .meinsec div ul.meintext li dd{
+        position: relative;
+        line-height: 24px;
+        margin-top: 30px;
+    }
+    ul.numbtn{
+        width: 40%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between
+    }
+    .footernavwrap div{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+    }
+    .address{
+        width: 80%;
+        margin: 0 auto;
+        padding: 30px 0;
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+    }
+}
+
+
+@media all and (max-width:768px) {
+
+    .rb{
+        display: none;
+    }
+    article{
+        height: 200px;
+    }
+    .artte{
+        padding-top: 0;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        
+    }
+    .artte div{
+        margin: 0 auto;
+        width: 1px;
+        height: 40px;
+        background-color: #fff;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    .artte > h2{
+        padding: 0 0;
+        font-size: 32px;
+    }
+    .artte p:last-child{
+        display: none;
+    }
+    .btn ul{
+        width: 80%;
+    }
+    .meinsec div{
+        width: 100%;
+    }
+    .meinsec div ul.meintext li{
+        width: 95%;
+        padding: 20px 40px;
+        border-radius: 20px;
+        font-size: 0.8em;
+        margin-bottom: 20px;
+    }
+    .meinsec div ul.meintext li dt::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 8px;
+        left: -25px;
+        width: 14px;
+        height: 8px;
+        background: url(../img/btn_slidedownbuh.png) no-repeat;
+        background-size: cover;
+    }
+    .meinsec div ul.meintext li dl dd{
+        font-size: 16px;
+    }
+    ul.numbtn{
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between
+    }
+    .footer{
+        width: 100%;
+    }
+    .footernavwrap{
+        width: 100%;
+        background-color: #fff;
+        box-sizing: border-box;
+        border: none;
+    
+    }
+    .footernavwrap div{
+        width: 100%;
+        display: block;
+        padding: 0;
+    }
+    .footernavwrap div ul{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .footernavwrap div li{
+        padding-right: 0;
+    }
+    .footernav{
+        padding: 50px 10px 20px;
+    }
+    .footernav li{
+        width: 50%;
+        background-color: #f7f7f7;
+        box-sizing: border-box;
+        border: 1px solid #e3e3e3;
+        padding: 10px 0;
+        text-align: center;
+    }
+    .footernav li a{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .footersns{
+        width: 35%;
+        margin: 0 auto;
+        justify-content:space-between ;
+    }
+    .footeraddresswrap{
+        width: 100%;
+    }
+    .address{
+        width: 100%;
+        padding: 30px 0;
+        flex-flow: column;
+    }
+    .address > img{
+        margin: 0 auto;
+    }
+    .foottext ul{
+        flex-flow: wrap;
+        padding: 20px 0;
+        justify-content: center;
+    }
+    .foottext ul li{
+        text-align: center;
+        font-size: 14px;
+    }
+    .foottext p{
+        text-align: center;
+    }
+}
